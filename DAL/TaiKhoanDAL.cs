@@ -32,7 +32,6 @@ namespace DAL
             DataTable dt = DBHelper.Instance.GetRecords(query);
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show(dt.Rows[0][0].ToString());
                 return dt.Rows[0][0].ToString();  //ID
             }
             else

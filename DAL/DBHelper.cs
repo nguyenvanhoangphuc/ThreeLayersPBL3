@@ -39,24 +39,6 @@ namespace DAL
         public DataTable GetRecords(string query)
         {
             DataTable dt = new DataTable();
-            //SqlCommand cmd = new SqlCommand(query, cnn);
-            //SqlDataReader r;
-            //dt.Columns.AddRange(new DataColumn[] {
-            //    new DataColumn {ColumnName = "ID", DataType = typeof(int)},
-            //    new DataColumn {ColumnName = "TenTK", DataType = typeof(string)},
-            //    new DataColumn {ColumnName = "MKhau", DataType = typeof(string)}
-            //});
-            //cnn.Open();
-            //r = cmd.ExecuteReader();
-            //while (r.Read())
-            //{
-            //    dt.Rows.Add(
-            //        Convert.ToInt32(r[0].ToString()),
-            //        r[1].ToString(),
-            //        r[2].ToString()
-            //        );
-            //}
-            //cnn.Close();
             SqlDataAdapter da = new SqlDataAdapter(query, cnn);
             da.Fill(dt);
             return dt;
