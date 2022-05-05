@@ -39,5 +39,10 @@ namespace DAL
                 return "Tai khoan hoac mat khau khong chinh xac!"; 
             }
         }
+        public string CheckTuCach(string id)
+        {
+            DataTable dt = DBHelper.Instance.GetRecords("select TuCach from Taikhoan inner join NguoiDung on TaiKhoan.ID = NguoiDung.ID where TaiKhoan.ID='" + id+"'");
+            return dt.Rows[0][0].ToString(); 
+        }
     }
 }

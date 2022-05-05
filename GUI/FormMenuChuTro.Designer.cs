@@ -1,7 +1,7 @@
 ﻿
-namespace MyFormLibrary
+namespace GUI
 {
-    partial class MenuChuTro
+    partial class FormMenuChuTro
     {
         /// <summary>
         /// Required designer variable.
@@ -57,10 +57,12 @@ namespace MyFormLibrary
             this.lblThoat = new System.Windows.Forms.Label();
             this.pnlThoat = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlLoaiPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlThongKe.SuspendLayout();
@@ -79,7 +81,7 @@ namespace MyFormLibrary
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlThoat.SuspendLayout();
             this.panel3.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -88,20 +90,21 @@ namespace MyFormLibrary
             this.lblLoaiPhong.AutoSize = true;
             this.lblLoaiPhong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblLoaiPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblLoaiPhong.Location = new System.Drawing.Point(80, 19);
+            this.lblLoaiPhong.Location = new System.Drawing.Point(80, 18);
             this.lblLoaiPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblLoaiPhong.Name = "lblLoaiPhong";
             this.lblLoaiPhong.Size = new System.Drawing.Size(114, 27);
             this.lblLoaiPhong.TabIndex = 7;
             this.lblLoaiPhong.Text = "Loại phòng";
-            this.lblLoaiPhong.Click += new System.EventHandler(this.lblLoaiPhong_Click);
+            this.lblLoaiPhong.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblLoaiPhong.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // pnlLoaiPhong
             // 
-            this.pnlLoaiPhong.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlLoaiPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlLoaiPhong.Controls.Add(this.pictureBox8);
             this.pnlLoaiPhong.Controls.Add(this.lblLoaiPhong);
-            this.pnlLoaiPhong.Location = new System.Drawing.Point(20, 265);
+            this.pnlLoaiPhong.Location = new System.Drawing.Point(13, 262);
             this.pnlLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLoaiPhong.Name = "pnlLoaiPhong";
             this.pnlLoaiPhong.Size = new System.Drawing.Size(285, 60);
@@ -123,12 +126,12 @@ namespace MyFormLibrary
             // 
             this.lblQuanLiNhaTro.AutoSize = true;
             this.lblQuanLiNhaTro.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.lblQuanLiNhaTro.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblQuanLiNhaTro.Font = new System.Drawing.Font("Palatino Linotype", 25.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblQuanLiNhaTro.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblQuanLiNhaTro.Location = new System.Drawing.Point(715, 21);
+            this.lblQuanLiNhaTro.Location = new System.Drawing.Point(667, 20);
             this.lblQuanLiNhaTro.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblQuanLiNhaTro.Name = "lblQuanLiNhaTro";
-            this.lblQuanLiNhaTro.Size = new System.Drawing.Size(286, 49);
+            this.lblQuanLiNhaTro.Size = new System.Drawing.Size(335, 57);
             this.lblQuanLiNhaTro.TabIndex = 7;
             this.lblQuanLiNhaTro.Text = "Quản lí nhà trọ ";
             // 
@@ -143,6 +146,8 @@ namespace MyFormLibrary
             this.lblThongKe.Size = new System.Drawing.Size(99, 27);
             this.lblThongKe.TabIndex = 7;
             this.lblThongKe.Text = "Thống kê";
+            this.lblThongKe.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblThongKe.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // lblTraTien
             // 
@@ -155,18 +160,22 @@ namespace MyFormLibrary
             this.lblTraTien.Size = new System.Drawing.Size(147, 27);
             this.lblTraTien.TabIndex = 7;
             this.lblTraTien.Text = "Trả tiền phòng";
+            this.lblTraTien.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblTraTien.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // lblDSNguoiThue
             // 
             this.lblDSNguoiThue.AutoSize = true;
             this.lblDSNguoiThue.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblDSNguoiThue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDSNguoiThue.Location = new System.Drawing.Point(68, 16);
+            this.lblDSNguoiThue.Location = new System.Drawing.Point(81, 16);
             this.lblDSNguoiThue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDSNguoiThue.Name = "lblDSNguoiThue";
-            this.lblDSNguoiThue.Size = new System.Drawing.Size(213, 27);
+            this.lblDSNguoiThue.Size = new System.Drawing.Size(179, 27);
             this.lblDSNguoiThue.TabIndex = 7;
-            this.lblDSNguoiThue.Text = "Danh sách người thuê";
+            this.lblDSNguoiThue.Text = "D.sách người thuê";
+            this.lblDSNguoiThue.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblDSNguoiThue.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // lblDatPhong
             // 
@@ -179,6 +188,8 @@ namespace MyFormLibrary
             this.lblDatPhong.Size = new System.Drawing.Size(109, 27);
             this.lblDatPhong.TabIndex = 7;
             this.lblDatPhong.Text = "Đặt phòng";
+            this.lblDatPhong.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblDatPhong.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // lblUser
             // 
@@ -191,12 +202,15 @@ namespace MyFormLibrary
             this.lblUser.Size = new System.Drawing.Size(123, 27);
             this.lblUser.TabIndex = 7;
             this.lblUser.Text = "Người dùng";
+            this.lblUser.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblUser.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // pnlThongKe
             // 
+            this.pnlThongKe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlThongKe.Controls.Add(this.pictureBox2);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(20, 584);
+            this.pnlThongKe.Location = new System.Drawing.Point(13, 535);
             this.pnlThongKe.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(285, 60);
@@ -207,7 +221,7 @@ namespace MyFormLibrary
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(67, 52);
@@ -224,10 +238,11 @@ namespace MyFormLibrary
             // 
             // pnlTraTien
             // 
+            this.pnlTraTien.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlTraTien.Controls.Add(this.pictureBox3);
             this.pnlTraTien.Controls.Add(this.lblTraTien);
             this.pnlTraTien.Controls.Add(this.panel11);
-            this.pnlTraTien.Location = new System.Drawing.Point(20, 500);
+            this.pnlTraTien.Location = new System.Drawing.Point(13, 466);
             this.pnlTraTien.Margin = new System.Windows.Forms.Padding(4);
             this.pnlTraTien.Name = "pnlTraTien";
             this.pnlTraTien.Size = new System.Drawing.Size(285, 60);
@@ -238,7 +253,7 @@ namespace MyFormLibrary
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(67, 52);
@@ -247,9 +262,10 @@ namespace MyFormLibrary
             // 
             // pnlDSNguoiThue
             // 
+            this.pnlDSNguoiThue.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlDSNguoiThue.Controls.Add(this.pictureBox5);
             this.pnlDSNguoiThue.Controls.Add(this.lblDSNguoiThue);
-            this.pnlDSNguoiThue.Location = new System.Drawing.Point(20, 345);
+            this.pnlDSNguoiThue.Location = new System.Drawing.Point(13, 330);
             this.pnlDSNguoiThue.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDSNguoiThue.Name = "pnlDSNguoiThue";
             this.pnlDSNguoiThue.Size = new System.Drawing.Size(285, 60);
@@ -269,9 +285,10 @@ namespace MyFormLibrary
             // 
             // pnlDatPhong
             // 
+            this.pnlDatPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlDatPhong.Controls.Add(this.pictureBox4);
             this.pnlDatPhong.Controls.Add(this.lblDatPhong);
-            this.pnlDatPhong.Location = new System.Drawing.Point(20, 418);
+            this.pnlDatPhong.Location = new System.Drawing.Point(13, 398);
             this.pnlDatPhong.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDatPhong.Name = "pnlDatPhong";
             this.pnlDatPhong.Size = new System.Drawing.Size(285, 60);
@@ -282,7 +299,7 @@ namespace MyFormLibrary
             this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 3);
+            this.pictureBox4.Location = new System.Drawing.Point(4, 2);
             this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(67, 52);
@@ -291,9 +308,10 @@ namespace MyFormLibrary
             // 
             // pnlNguoiDung
             // 
+            this.pnlNguoiDung.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlNguoiDung.Controls.Add(this.pictureBox6);
             this.pnlNguoiDung.Controls.Add(this.lblUser);
-            this.pnlNguoiDung.Location = new System.Drawing.Point(20, 191);
+            this.pnlNguoiDung.Location = new System.Drawing.Point(13, 194);
             this.pnlNguoiDung.Margin = new System.Windows.Forms.Padding(4);
             this.pnlNguoiDung.Name = "pnlNguoiDung";
             this.pnlNguoiDung.Size = new System.Drawing.Size(285, 60);
@@ -313,11 +331,11 @@ namespace MyFormLibrary
             // 
             // pnlDSPhong
             // 
-            this.pnlDSPhong.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.pnlDSPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlDSPhong.Controls.Add(this.pictureBox7);
             this.pnlDSPhong.Controls.Add(this.lblDSPhong);
             this.pnlDSPhong.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.pnlDSPhong.Location = new System.Drawing.Point(20, 109);
+            this.pnlDSPhong.Location = new System.Drawing.Point(13, 126);
             this.pnlDSPhong.Margin = new System.Windows.Forms.Padding(4);
             this.pnlDSPhong.Name = "pnlDSPhong";
             this.pnlDSPhong.Size = new System.Drawing.Size(285, 60);
@@ -346,13 +364,16 @@ namespace MyFormLibrary
             this.lblDSPhong.Size = new System.Drawing.Size(171, 27);
             this.lblDSPhong.TabIndex = 7;
             this.lblDSPhong.Text = "Danh sách phòng";
+            this.lblDSPhong.Click += new System.EventHandler(this.lblDSPhong_Click);
+            this.lblDSPhong.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblDSPhong.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // panel5
             // 
             this.panel5.BackColor = System.Drawing.SystemColors.Desktop;
             this.panel5.Controls.Add(this.pictureBox1);
             this.panel5.Controls.Add(this.lblThoat);
-            this.panel5.Location = new System.Drawing.Point(6, 4);
+            this.panel5.Location = new System.Drawing.Point(5, 4);
             this.panel5.Margin = new System.Windows.Forms.Padding(4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(237, 50);
@@ -384,7 +405,7 @@ namespace MyFormLibrary
             // 
             this.pnlThoat.BackColor = System.Drawing.SystemColors.Desktop;
             this.pnlThoat.Controls.Add(this.panel3);
-            this.pnlThoat.Location = new System.Drawing.Point(20, 675);
+            this.pnlThoat.Location = new System.Drawing.Point(13, 619);
             this.pnlThoat.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThoat.Name = "pnlThoat";
             this.pnlThoat.Size = new System.Drawing.Size(285, 66);
@@ -400,32 +421,55 @@ namespace MyFormLibrary
             this.panel3.Size = new System.Drawing.Size(247, 58);
             this.panel3.TabIndex = 4;
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.panel1.Controls.Add(this.panel4);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pnlLoaiPhong);
-            this.panel1.Controls.Add(this.lblQuanLiNhaTro);
-            this.panel1.Controls.Add(this.pnlThongKe);
-            this.panel1.Controls.Add(this.pnlTraTien);
-            this.panel1.Controls.Add(this.pnlDSNguoiThue);
-            this.panel1.Controls.Add(this.pnlDatPhong);
-            this.panel1.Controls.Add(this.pnlNguoiDung);
-            this.panel1.Controls.Add(this.pnlDSPhong);
-            this.panel1.Controls.Add(this.pnlThoat);
-            this.panel1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Location = new System.Drawing.Point(4, 4);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1390, 760);
-            this.panel1.TabIndex = 3;
-            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
+            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.Controls.Add(this.label4);
+            this.panel4.Controls.Add(this.label3);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Location = new System.Drawing.Point(327, 94);
+            this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1034, 611);
+            this.panel4.TabIndex = 10;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.label4.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(131, 390);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(774, 142);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "quản lí nhà trọ";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(102, 218);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(847, 142);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "đến với hệ thống";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(118, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(807, 142);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Chào mừng bạn";
             // 
             // panel2
             // 
+            this.panel2.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.panel2.Controls.Add(this.label1);
-            this.panel2.Location = new System.Drawing.Point(51, 21);
+            this.panel2.Location = new System.Drawing.Point(52, 21);
+            this.panel2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 71);
             this.panel2.TabIndex = 9;
@@ -433,30 +477,34 @@ namespace MyFormLibrary
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.label1.Location = new System.Drawing.Point(48, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 38);
             this.label1.TabIndex = 10;
             this.label1.Text = "Menu";
             // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
-            this.panel4.Location = new System.Drawing.Point(327, 109);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1046, 632);
-            this.panel4.TabIndex = 10;
-            // 
-            // MenuChuTro
+            // FormMenuChuTro
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.panel1);
+            this.ClientSize = new System.Drawing.Size(1373, 710);
+            this.Controls.Add(this.pnlThoat);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.lblQuanLiNhaTro);
+            this.Controls.Add(this.pnlLoaiPhong);
+            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.pnlDSPhong);
+            this.Controls.Add(this.pnlThongKe);
+            this.Controls.Add(this.pnlNguoiDung);
+            this.Controls.Add(this.pnlTraTien);
+            this.Controls.Add(this.pnlDatPhong);
+            this.Controls.Add(this.pnlDSNguoiThue);
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "MenuChuTro";
-            this.Size = new System.Drawing.Size(1398, 768);
+            this.Name = "FormMenuChuTro";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -483,11 +531,12 @@ namespace MyFormLibrary
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlThoat.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -521,9 +570,11 @@ namespace MyFormLibrary
         private System.Windows.Forms.Label lblThoat;
         private System.Windows.Forms.Panel pnlThoat;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

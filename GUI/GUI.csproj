@@ -46,16 +46,34 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDSPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSPhong.Designer.cs">
+      <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuChuTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuChuTro.Designer.cs">
+      <DependentUpon>FormMenuChuTro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDSPhong.resx">
+      <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuChuTro.resx">
+      <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -40,6 +40,13 @@ namespace GUI
                     return;
             }
             MessageBox.Show("Bạn đã đăng nhập thành công hệ thống!!!");
+            //Check tư cách để vào form cho mình 
+            if (TaiKhoanBLL.Instance.CheckTuCach(getuser)=="ChuTro")
+            {
+                FormMenuChuTro fCT = new FormMenuChuTro();
+                fCT.Show();
+                this.Hide(); 
+            }
         }
 
         private void btnQuenMatKhau_Click(object sender, EventArgs e)

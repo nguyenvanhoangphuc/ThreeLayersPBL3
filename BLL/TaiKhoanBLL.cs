@@ -39,5 +39,9 @@ namespace BLL
             string info = TaiKhoanDAL.Instance.CheckLogin(obj);
             return info;
         }
+        public string CheckTuCach(string id)
+        {
+            return TaiKhoanDAL.Instance.CheckTuCach(id);
+        }
     }
 }
