@@ -41,53 +41,60 @@ namespace GUI
             this.pnlThoat = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.lblThoat = new System.Windows.Forms.Label();
             this.pnlLoaiPhong = new System.Windows.Forms.Panel();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.lblLoaiPhong = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlDSPhong = new System.Windows.Forms.Panel();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
             this.lblDSPhong = new System.Windows.Forms.Label();
             this.pnlThongKe = new System.Windows.Forms.Panel();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblThongKe = new System.Windows.Forms.Label();
             this.pnlNguoiDung = new System.Windows.Forms.Panel();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.lblUser = new System.Windows.Forms.Label();
             this.pnlTraTien = new System.Windows.Forms.Panel();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblTraTien = new System.Windows.Forms.Label();
             this.panel11 = new System.Windows.Forms.Panel();
             this.pnlDatPhong = new System.Windows.Forms.Panel();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.lblDatPhong = new System.Windows.Forms.Label();
             this.pnlDSNguoiThue = new System.Windows.Forms.Panel();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.lblDSNguoiThue = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.cbID = new System.Windows.Forms.CheckBox();
+            this.cbTen = new System.Windows.Forms.CheckBox();
+            this.cbLoai = new System.Windows.Forms.CheckBox();
+            this.cbTT = new System.Windows.Forms.CheckBox();
+            this.gbSearch = new System.Windows.Forms.GroupBox();
+            this.butDefault = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
             this.pnlThoat.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnlLoaiPhong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.panel2.SuspendLayout();
             this.pnlDSPhong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             this.pnlThongKe.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnlNguoiDung.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.pnlTraTien.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.pnlDatPhong.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.pnlDSNguoiThue.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.gbSearch.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblQuanLiNhaTro
@@ -106,11 +113,13 @@ namespace GUI
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.Controls.Add(this.gbSearch);
             this.panel4.Controls.Add(this.lblTieuDe);
             this.panel4.Controls.Add(this.DGVPhongTro);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.btnDel);
             this.panel4.Controls.Add(this.btnUpdate);
+            this.panel4.Controls.Add(this.butDefault);
             this.panel4.Controls.Add(this.btnAdd);
             this.panel4.Controls.Add(this.txtSearch);
             this.panel4.Location = new System.Drawing.Point(327, 88);
@@ -161,6 +170,7 @@ namespace GUI
             this.btnDel.TabIndex = 1;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSearch
             // 
@@ -172,22 +182,23 @@ namespace GUI
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // DGVPhongTro
             // 
             this.DGVPhongTro.ColumnHeadersHeight = 30;
-            this.DGVPhongTro.Location = new System.Drawing.Point(50, 201);
+            this.DGVPhongTro.Location = new System.Drawing.Point(50, 252);
             this.DGVPhongTro.Name = "DGVPhongTro";
             this.DGVPhongTro.RowHeadersWidth = 80;
             this.DGVPhongTro.RowTemplate.Height = 24;
-            this.DGVPhongTro.Size = new System.Drawing.Size(935, 384);
+            this.DGVPhongTro.Size = new System.Drawing.Size(935, 333);
             this.DGVPhongTro.TabIndex = 2;
             // 
             // lblTieuDe
             // 
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(250, 146);
+            this.lblTieuDe.Location = new System.Drawing.Point(248, 198);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(516, 49);
             this.lblTieuDe.TabIndex = 3;
@@ -224,16 +235,6 @@ namespace GUI
             this.panel5.Size = new System.Drawing.Size(237, 50);
             this.panel5.TabIndex = 3;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
-            this.pictureBox1.Location = new System.Drawing.Point(181, 0);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            // 
             // lblThoat
             // 
             this.lblThoat.AutoSize = true;
@@ -245,6 +246,7 @@ namespace GUI
             this.lblThoat.Size = new System.Drawing.Size(133, 51);
             this.lblThoat.TabIndex = 0;
             this.lblThoat.Text = "Thoát";
+            this.lblThoat.Click += new System.EventHandler(this.lblThoat_Click);
             // 
             // pnlLoaiPhong
             // 
@@ -256,18 +258,6 @@ namespace GUI
             this.pnlLoaiPhong.Name = "pnlLoaiPhong";
             this.pnlLoaiPhong.Size = new System.Drawing.Size(285, 60);
             this.pnlLoaiPhong.TabIndex = 18;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox8.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox8.TabIndex = 7;
-            this.pictureBox8.TabStop = false;
             // 
             // lblLoaiPhong
             // 
@@ -305,7 +295,7 @@ namespace GUI
             // 
             // pnlDSPhong
             // 
-            this.pnlDSPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlDSPhong.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.pnlDSPhong.Controls.Add(this.pictureBox7);
             this.pnlDSPhong.Controls.Add(this.lblDSPhong);
             this.pnlDSPhong.ForeColor = System.Drawing.SystemColors.ButtonFace;
@@ -315,23 +305,11 @@ namespace GUI
             this.pnlDSPhong.Size = new System.Drawing.Size(285, 60);
             this.pnlDSPhong.TabIndex = 12;
             // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox7.TabIndex = 7;
-            this.pictureBox7.TabStop = false;
-            // 
             // lblDSPhong
             // 
             this.lblDSPhong.AutoSize = true;
             this.lblDSPhong.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDSPhong.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDSPhong.ForeColor = System.Drawing.Color.Blue;
             this.lblDSPhong.Location = new System.Drawing.Point(80, 17);
             this.lblDSPhong.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDSPhong.Name = "lblDSPhong";
@@ -349,18 +327,6 @@ namespace GUI
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(285, 60);
             this.pnlThongKe.TabIndex = 17;
-            // 
-            // pictureBox2
-            // 
-            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox2.TabIndex = 7;
-            this.pictureBox2.TabStop = false;
             // 
             // lblThongKe
             // 
@@ -385,18 +351,6 @@ namespace GUI
             this.pnlNguoiDung.Size = new System.Drawing.Size(285, 60);
             this.pnlNguoiDung.TabIndex = 13;
             // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox6.Location = new System.Drawing.Point(4, 4);
-            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox6.TabIndex = 7;
-            this.pictureBox6.TabStop = false;
-            // 
             // lblUser
             // 
             this.lblUser.AutoSize = true;
@@ -420,18 +374,6 @@ namespace GUI
             this.pnlTraTien.Name = "pnlTraTien";
             this.pnlTraTien.Size = new System.Drawing.Size(285, 60);
             this.pnlTraTien.TabIndex = 16;
-            // 
-            // pictureBox3
-            // 
-            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox3.TabIndex = 7;
-            this.pictureBox3.TabStop = false;
             // 
             // lblTraTien
             // 
@@ -464,18 +406,6 @@ namespace GUI
             this.pnlDatPhong.Size = new System.Drawing.Size(285, 60);
             this.pnlDatPhong.TabIndex = 14;
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox4.Location = new System.Drawing.Point(4, 2);
-            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(67, 52);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            // 
             // lblDatPhong
             // 
             this.lblDatPhong.AutoSize = true;
@@ -499,6 +429,100 @@ namespace GUI
             this.pnlDSNguoiThue.Size = new System.Drawing.Size(285, 60);
             this.pnlDSNguoiThue.TabIndex = 15;
             // 
+            // lblDSNguoiThue
+            // 
+            this.lblDSNguoiThue.AutoSize = true;
+            this.lblDSNguoiThue.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblDSNguoiThue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblDSNguoiThue.Location = new System.Drawing.Point(81, 16);
+            this.lblDSNguoiThue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblDSNguoiThue.Name = "lblDSNguoiThue";
+            this.lblDSNguoiThue.Size = new System.Drawing.Size(179, 27);
+            this.lblDSNguoiThue.TabIndex = 7;
+            this.lblDSNguoiThue.Text = "D.sách người thuê";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox1.Location = new System.Drawing.Point(181, 0);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox8.TabIndex = 7;
+            this.pictureBox8.TabStop = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox7.TabIndex = 7;
+            this.pictureBox7.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox2.TabIndex = 7;
+            this.pictureBox2.TabStop = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox6.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox6.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox6.TabIndex = 7;
+            this.pictureBox6.TabStop = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox3.TabIndex = 7;
+            this.pictureBox3.TabStop = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
             // pictureBox5
             // 
             this.pictureBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -511,17 +535,70 @@ namespace GUI
             this.pictureBox5.TabIndex = 7;
             this.pictureBox5.TabStop = false;
             // 
-            // lblDSNguoiThue
+            // cbID
             // 
-            this.lblDSNguoiThue.AutoSize = true;
-            this.lblDSNguoiThue.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblDSNguoiThue.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.lblDSNguoiThue.Location = new System.Drawing.Point(81, 16);
-            this.lblDSNguoiThue.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblDSNguoiThue.Name = "lblDSNguoiThue";
-            this.lblDSNguoiThue.Size = new System.Drawing.Size(179, 27);
-            this.lblDSNguoiThue.TabIndex = 7;
-            this.lblDSNguoiThue.Text = "D.sách người thuê";
+            this.cbID.AutoSize = true;
+            this.cbID.Location = new System.Drawing.Point(33, 18);
+            this.cbID.Name = "cbID";
+            this.cbID.Size = new System.Drawing.Size(42, 20);
+            this.cbID.TabIndex = 4;
+            this.cbID.Text = "ID";
+            this.cbID.UseVisualStyleBackColor = true;
+            // 
+            // cbTen
+            // 
+            this.cbTen.AutoSize = true;
+            this.cbTen.Location = new System.Drawing.Point(132, 18);
+            this.cbTen.Name = "cbTen";
+            this.cbTen.Size = new System.Drawing.Size(94, 20);
+            this.cbTen.TabIndex = 4;
+            this.cbTen.Text = "Tên phòng";
+            this.cbTen.UseVisualStyleBackColor = true;
+            // 
+            // cbLoai
+            // 
+            this.cbLoai.AutoSize = true;
+            this.cbLoai.Location = new System.Drawing.Point(278, 18);
+            this.cbLoai.Name = "cbLoai";
+            this.cbLoai.Size = new System.Drawing.Size(96, 20);
+            this.cbLoai.TabIndex = 4;
+            this.cbLoai.Text = "Loại phòng";
+            this.cbLoai.UseVisualStyleBackColor = true;
+            // 
+            // cbTT
+            // 
+            this.cbTT.AutoSize = true;
+            this.cbTT.Location = new System.Drawing.Point(428, 18);
+            this.cbTT.Name = "cbTT";
+            this.cbTT.Size = new System.Drawing.Size(88, 20);
+            this.cbTT.TabIndex = 4;
+            this.cbTT.Text = "Tình trạng";
+            this.cbTT.UseVisualStyleBackColor = true;
+            // 
+            // gbSearch
+            // 
+            this.gbSearch.Controls.Add(this.cbID);
+            this.gbSearch.Controls.Add(this.cbTT);
+            this.gbSearch.Controls.Add(this.cbTen);
+            this.gbSearch.Controls.Add(this.cbLoai);
+            this.gbSearch.Location = new System.Drawing.Point(443, 151);
+            this.gbSearch.Name = "gbSearch";
+            this.gbSearch.Size = new System.Drawing.Size(542, 44);
+            this.gbSearch.TabIndex = 5;
+            this.gbSearch.TabStop = false;
+            this.gbSearch.Text = "Search theo:";
+            // 
+            // butDefault
+            // 
+            this.butDefault.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.butDefault.ForeColor = System.Drawing.Color.Yellow;
+            this.butDefault.Location = new System.Drawing.Point(108, 151);
+            this.butDefault.Name = "butDefault";
+            this.butDefault.Size = new System.Drawing.Size(134, 54);
+            this.butDefault.TabIndex = 1;
+            this.butDefault.Text = "Default";
+            this.butDefault.UseVisualStyleBackColor = false;
+            this.butDefault.Click += new System.EventHandler(this.butDefault_Click);
             // 
             // FormDSPhong
             // 
@@ -543,6 +620,7 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormDSPhong";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormDSPhong_FormClosing);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).EndInit();
@@ -550,30 +628,32 @@ namespace GUI
             this.panel3.ResumeLayout(false);
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.pnlDSPhong.ResumeLayout(false);
             this.pnlDSPhong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             this.pnlThongKe.ResumeLayout(false);
             this.pnlThongKe.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnlNguoiDung.ResumeLayout(false);
             this.pnlNguoiDung.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.pnlTraTien.ResumeLayout(false);
             this.pnlTraTien.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.pnlDatPhong.ResumeLayout(false);
             this.pnlDatPhong.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.pnlDSNguoiThue.ResumeLayout(false);
             this.pnlDSNguoiThue.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.gbSearch.ResumeLayout(false);
+            this.gbSearch.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -618,5 +698,11 @@ namespace GUI
         private System.Windows.Forms.Panel pnlDSNguoiThue;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label lblDSNguoiThue;
+        private System.Windows.Forms.GroupBox gbSearch;
+        private System.Windows.Forms.CheckBox cbID;
+        private System.Windows.Forms.CheckBox cbTT;
+        private System.Windows.Forms.CheckBox cbTen;
+        private System.Windows.Forms.CheckBox cbLoai;
+        private System.Windows.Forms.Button butDefault;
     }
 }

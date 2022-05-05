@@ -400,6 +400,7 @@ namespace GUI
             this.lblThoat.Size = new System.Drawing.Size(133, 51);
             this.lblThoat.TabIndex = 0;
             this.lblThoat.Text = "Thoát";
+            this.lblThoat.Click += new System.EventHandler(this.lblThoat_Click);
             // 
             // pnlThoat
             // 
@@ -505,6 +506,7 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenuChuTro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenuChuTro_FormClosing);
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

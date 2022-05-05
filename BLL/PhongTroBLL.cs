@@ -4,7 +4,9 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using DAL; 
+using System.Windows.Forms;
+using DAL;
+using DTO;
 
 namespace BLL
 {
@@ -27,6 +29,46 @@ namespace BLL
         public DataTable GetDSPhongTro()
         {
             return PhongTroDAL.Instance.GetDSPhongTro();
+        }
+
+        public PhongTro GetPhongByID(string id)
+        {
+            return PhongTroDAL.Instance.GetPhongByID(id);
+        }
+
+        public string AddPhongTro(PhongTro phongTro, string ID)
+        {
+            if (phongTro.ID == "")
+            {
+                return "requied_ID";
+            }
+
+            if (phongTro.TenPhong == "")
+            {
+                return "requied_TenPhong";
+            }
+
+            if (phongTro.ID_LoaiPhong == "")
+            {
+                return "requied_ID_LoaiPhong";
+            }
+
+            if (phongTro.TinhTrang == "")
+            {
+                return "requied_TT";
+            }
+
+            return PhongTroDAL.Instance.AddPhongTro(phongTro,ID);
+        }
+
+        public static void DeletePhong(string id)
+        {
+            PhongTroDAL.Instance.DeletePhong(id); 
+        }
+
+        public DataTable SearchData(PhongTro pt)
+        {
+            return PhongTroDAL.Instance.SearchData(pt); 
         }
     }
 }

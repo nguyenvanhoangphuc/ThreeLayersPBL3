@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhong.Designer.cs">
+      <DependentUpon>AddPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDSPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +72,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPhong.resx">
+      <DependentUpon>AddPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </EmbeddedResource>
