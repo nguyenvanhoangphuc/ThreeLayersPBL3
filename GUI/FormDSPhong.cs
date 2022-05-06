@@ -88,11 +88,6 @@ namespace GUI
             ShowDGV(); 
         }
 
-        private void lblDSPhong_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void lblDSNguoiThue_Click(object sender, EventArgs e)
         {
             FormNguoiThue f = new FormNguoiThue();
