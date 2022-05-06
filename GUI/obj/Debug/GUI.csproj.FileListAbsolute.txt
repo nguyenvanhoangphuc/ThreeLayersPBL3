@@ -20,3 +20,4 @@ F:\Data\ki4\PBL3\3layersPBL3\PR_Quanlyphongtro\GUI\bin\Debug\DAL.pdb
 F:\Data\ki4\PBL3\3layersPBL3\PR_Quanlyphongtro\GUI\obj\Debug\GUI.FormMenuChuTro.resources
 F:\Data\ki4\PBL3\3layersPBL3\PR_Quanlyphongtro\GUI\obj\Debug\GUI.FormDSPhong.resources
 F:\Data\ki4\PBL3\3layersPBL3\PR_Quanlyphongtro\GUI\obj\Debug\GUI.AddPhong.resources
+F:\Data\ki4\PBL3\3layersPBL3\PR_Quanlyphongtro\GUI\obj\Debug\GUI.FormNguoiThue.resources

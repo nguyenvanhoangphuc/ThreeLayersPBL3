@@ -96,6 +96,7 @@ namespace GUI
             this.lblLoaiPhong.Size = new System.Drawing.Size(114, 27);
             this.lblLoaiPhong.TabIndex = 7;
             this.lblLoaiPhong.Text = "Loại phòng";
+            this.lblLoaiPhong.Click += new System.EventHandler(this.lblLoaiPhong_Click);
             this.lblLoaiPhong.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblLoaiPhong.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
@@ -174,6 +175,7 @@ namespace GUI
             this.lblDSNguoiThue.Size = new System.Drawing.Size(179, 27);
             this.lblDSNguoiThue.TabIndex = 7;
             this.lblDSNguoiThue.Text = "D.sách người thuê";
+            this.lblDSNguoiThue.Click += new System.EventHandler(this.lblDSNguoiThue_Click);
             this.lblDSNguoiThue.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblDSNguoiThue.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
@@ -503,10 +505,10 @@ namespace GUI
             this.Controls.Add(this.pnlTraTien);
             this.Controls.Add(this.pnlDatPhong);
             this.Controls.Add(this.pnlDSNguoiThue);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenuChuTro";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FormMenuChuTro_FormClosing);
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();

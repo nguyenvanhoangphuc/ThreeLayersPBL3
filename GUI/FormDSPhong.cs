@@ -88,9 +88,16 @@ namespace GUI
             ShowDGV(); 
         }
 
-        private void FormDSPhong_FormClosing(object sender, FormClosingEventArgs e)
+        private void lblDSPhong_Click(object sender, EventArgs e)
         {
-            dExit(); 
+
+        }
+
+        private void lblDSNguoiThue_Click(object sender, EventArgs e)
+        {
+            FormNguoiThue f = new FormNguoiThue();
+            f.Show();
+            this.Close(); 
         }
     }
 }

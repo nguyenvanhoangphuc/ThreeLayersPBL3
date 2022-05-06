@@ -70,6 +70,12 @@
     <Compile Include="FormMenuChuTro.Designer.cs">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormNguoiThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNguoiThue.Designer.cs">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddPhong.resx">
@@ -83,6 +89,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNguoiThue.resx">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

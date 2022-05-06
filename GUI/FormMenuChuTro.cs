@@ -22,7 +22,7 @@ namespace GUI
         private void lblDSPhong_Click(object sender, EventArgs e)
         {
             FormDSPhong fdsP = new FormDSPhong();
-            fdsP.dExit = new FormDSPhong.myDel(xuathien); 
+            fdsP.dExit = new FormDSPhong.myDel(xuathien);
             fdsP.Show();
             this.Hide();
         }
@@ -44,13 +44,21 @@ namespace GUI
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
-            dExit(); 
+            dExit();  
             this.Close();
         }
 
-        private void FormMenuChuTro_FormClosing(object sender, FormClosingEventArgs e)
+        private void lblLoaiPhong_Click(object sender, EventArgs e)
         {
-            dExit(); 
+
+        }
+
+        private void lblDSNguoiThue_Click(object sender, EventArgs e)
+        {
+            FormNguoiThue f = new FormNguoiThue();
+            f.dExit = new FormNguoiThue.myDel(xuathien);
+            f.Show();
+            this.Hide(); 
         }
     }
 }
