@@ -23,13 +23,4 @@ namespace DTO
         public virtual NguoiDung NguoiDung { get; set; } 
 
     }
-    public partial class TaiKhoan
-    {
-        //phuong thuc nay phai ghi trong BLL
-        public List<TaiKhoan> GetAll()
-        {
-            List<TaiKhoan> list = new List<TaiKhoan>();
-            return list;
-        }
-    }
 }

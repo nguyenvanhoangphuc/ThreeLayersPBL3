@@ -32,13 +32,17 @@ namespace DAL
             DataTable dt = DBHelper.Instance.GetRecords(query);
             if (dt.Rows.Count > 0)
             {
-                MessageBox.Show(dt.Rows[0][0].ToString());
                 return dt.Rows[0][0].ToString();  //ID
             }
             else
             {
                 return "Tai khoan hoac mat khau khong chinh xac!"; 
             }
+        }
+        public string CheckTuCach(string id)
+        {
+            DataTable dt = DBHelper.Instance.GetRecords("select TuCach from Taikhoan inner join NguoiDung on TaiKhoan.ID = NguoiDung.ID where TaiKhoan.ID='" + id+"'");
+            return dt.Rows[0][0].ToString(); 
         }
     }
 }

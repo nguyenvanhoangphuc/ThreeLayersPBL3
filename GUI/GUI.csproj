@@ -46,16 +46,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPhong.Designer.cs">
+      <DependentUpon>AddPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDSPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSPhong.Designer.cs">
+      <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormLogin.Designer.cs">
       <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuChuTro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuChuTro.Designer.cs">
+      <DependentUpon>FormMenuChuTro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormNguoiThue.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormNguoiThue.Designer.cs">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddPhong.resx">
+      <DependentUpon>AddPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDSPhong.resx">
+      <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuChuTro.resx">
+      <DependentUpon>FormMenuChuTro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormNguoiThue.resx">
+      <DependentUpon>FormNguoiThue.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -65,6 +101,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -88,6 +125,18 @@
       <Project>{2003f117-bb67-4aae-b848-68394090e821}</Project>
       <Name>DTO</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconShow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconShowpassword.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\iconUser.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyeClose.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
