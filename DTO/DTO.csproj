@@ -50,10 +50,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LoaiThietBi.cs" />
     <Compile Include="NguoiDung.cs" />
     <Compile Include="PhongTro.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="TaiKhoan.cs" />
+    <Compile Include="ThietBi.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

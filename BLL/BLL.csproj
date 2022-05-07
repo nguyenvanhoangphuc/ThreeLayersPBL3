@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BLL_LoaiTB.cs" />
     <Compile Include="NguoiThueBLL.cs" />
     <Compile Include="PhongTroBLL.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

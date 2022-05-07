@@ -13,8 +13,6 @@ namespace GUI
 {
     public partial class FormNguoiThue : Form
     {
-        public delegate void myDel();
-        public myDel dExit;
         public FormNguoiThue()
         {
             InitializeComponent();
@@ -81,7 +79,6 @@ namespace GUI
 
         private void label1_Click(object sender, EventArgs e)
         {
-            dExit(); 
             this.Close();
         }
     }

@@ -13,8 +13,6 @@ namespace GUI
 {
     public partial class FormDSPhong : Form
     {
-        public delegate void myDel();
-        public myDel dExit;
         public FormDSPhong()
         {
             InitializeComponent();
@@ -45,7 +43,6 @@ namespace GUI
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
-            dExit();
             this.Close();
         }
 
