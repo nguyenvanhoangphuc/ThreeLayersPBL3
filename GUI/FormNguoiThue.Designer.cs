@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
@@ -49,6 +50,7 @@
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.Gainsboro;
+            this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Controls.Add(this.label13);
@@ -67,49 +69,59 @@
             this.panel2.Size = new System.Drawing.Size(770, 490);
             this.panel2.TabIndex = 0;
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Palatino Linotype", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(196, 16);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(372, 40);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "Quản lý người thuê phòng";
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Maiandra GD", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(231, 200);
+            this.label1.Location = new System.Drawing.Point(197, 234);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(309, 26);
+            this.label1.Size = new System.Drawing.Size(389, 34);
             this.label1.TabIndex = 6;
             this.label1.Text = "Danh sách người thuê phòng";
             // 
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(435, 39);
+            this.label14.Location = new System.Drawing.Point(423, 72);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(79, 19);
+            this.label14.Size = new System.Drawing.Size(97, 24);
             this.label14.TabIndex = 5;
             this.label14.Text = "Quê quán";
             // 
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(242, 39);
+            this.label13.Location = new System.Drawing.Point(236, 72);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(97, 19);
+            this.label13.Size = new System.Drawing.Size(119, 24);
             this.label13.TabIndex = 5;
             this.label13.Text = "Số điện thoại";
             // 
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(55, 39);
+            this.label12.Location = new System.Drawing.Point(51, 72);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(78, 19);
+            this.label12.Size = new System.Drawing.Size(96, 24);
             this.label12.TabIndex = 5;
             this.label12.Text = "Họ và tên";
             // 
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(595, 39);
+            this.label11.Location = new System.Drawing.Point(582, 72);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(139, 19);
+            this.label11.Size = new System.Drawing.Size(167, 24);
             this.label11.TabIndex = 5;
             this.label11.Text = "Căn cước công dân";
             // 
@@ -117,7 +129,7 @@
             // 
             this.but_xoa.BackColor = System.Drawing.Color.Black;
             this.but_xoa.ForeColor = System.Drawing.Color.White;
-            this.but_xoa.Location = new System.Drawing.Point(573, 133);
+            this.but_xoa.Location = new System.Drawing.Point(576, 171);
             this.but_xoa.Name = "but_xoa";
             this.but_xoa.Size = new System.Drawing.Size(105, 50);
             this.but_xoa.TabIndex = 4;
@@ -129,7 +141,7 @@
             // 
             this.but_luu.BackColor = System.Drawing.Color.Black;
             this.but_luu.ForeColor = System.Drawing.Color.White;
-            this.but_luu.Location = new System.Drawing.Point(336, 133);
+            this.but_luu.Location = new System.Drawing.Point(339, 171);
             this.but_luu.Name = "but_luu";
             this.but_luu.Size = new System.Drawing.Size(105, 50);
             this.but_luu.TabIndex = 4;
@@ -141,7 +153,7 @@
             // 
             this.but_sua.BackColor = System.Drawing.Color.Black;
             this.but_sua.ForeColor = System.Drawing.Color.White;
-            this.but_sua.Location = new System.Drawing.Point(93, 133);
+            this.but_sua.Location = new System.Drawing.Point(96, 171);
             this.but_sua.Name = "but_sua";
             this.but_sua.Size = new System.Drawing.Size(105, 50);
             this.but_sua.TabIndex = 4;
@@ -154,44 +166,44 @@
             this.dgv_NguoiThue.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_NguoiThue.BackgroundColor = System.Drawing.SystemColors.ActiveBorder;
             this.dgv_NguoiThue.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_NguoiThue.Location = new System.Drawing.Point(29, 243);
+            this.dgv_NguoiThue.Location = new System.Drawing.Point(36, 271);
             this.dgv_NguoiThue.Name = "dgv_NguoiThue";
             this.dgv_NguoiThue.RowHeadersWidth = 51;
             this.dgv_NguoiThue.RowTemplate.Height = 24;
-            this.dgv_NguoiThue.Size = new System.Drawing.Size(705, 233);
+            this.dgv_NguoiThue.Size = new System.Drawing.Size(698, 205);
             this.dgv_NguoiThue.TabIndex = 3;
             // 
             // txt_CCCD
             // 
-            this.txt_CCCD.Location = new System.Drawing.Point(573, 61);
+            this.txt_CCCD.Location = new System.Drawing.Point(576, 99);
             this.txt_CCCD.Name = "txt_CCCD";
-            this.txt_CCCD.Size = new System.Drawing.Size(183, 27);
+            this.txt_CCCD.Size = new System.Drawing.Size(183, 31);
             this.txt_CCCD.TabIndex = 0;
             // 
             // txt_QueQuan
             // 
-            this.txt_QueQuan.Location = new System.Drawing.Point(383, 61);
+            this.txt_QueQuan.Location = new System.Drawing.Point(386, 99);
             this.txt_QueQuan.Name = "txt_QueQuan";
-            this.txt_QueQuan.Size = new System.Drawing.Size(184, 27);
+            this.txt_QueQuan.Size = new System.Drawing.Size(184, 31);
             this.txt_QueQuan.TabIndex = 0;
             // 
             // txt_SDT
             // 
-            this.txt_SDT.Location = new System.Drawing.Point(204, 61);
+            this.txt_SDT.Location = new System.Drawing.Point(207, 99);
             this.txt_SDT.Name = "txt_SDT";
-            this.txt_SDT.Size = new System.Drawing.Size(173, 27);
+            this.txt_SDT.Size = new System.Drawing.Size(173, 31);
             this.txt_SDT.TabIndex = 0;
             // 
             // txt_HoTen
             // 
-            this.txt_HoTen.Location = new System.Drawing.Point(13, 61);
+            this.txt_HoTen.Location = new System.Drawing.Point(16, 99);
             this.txt_HoTen.Name = "txt_HoTen";
-            this.txt_HoTen.Size = new System.Drawing.Size(185, 27);
+            this.txt_HoTen.Size = new System.Drawing.Size(185, 31);
             this.txt_HoTen.TabIndex = 0;
             // 
             // FormNguoiThue
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 19F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(794, 514);
@@ -226,5 +238,6 @@
         private System.Windows.Forms.TextBox txt_QueQuan;
         private System.Windows.Forms.TextBox txt_SDT;
         private System.Windows.Forms.TextBox txt_HoTen;
+        private System.Windows.Forms.Label label2;
     }
 }

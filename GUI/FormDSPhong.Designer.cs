@@ -43,6 +43,7 @@ namespace GUI
             this.butDefault = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
             this.txtSearch = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.gbSearch.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
@@ -51,6 +52,7 @@ namespace GUI
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.gbSearch);
             this.panel4.Controls.Add(this.lblTieuDe);
             this.panel4.Controls.Add(this.DGVPhongTro);
@@ -72,7 +74,7 @@ namespace GUI
             this.gbSearch.Controls.Add(this.cbTT);
             this.gbSearch.Controls.Add(this.cbTen);
             this.gbSearch.Controls.Add(this.cbLoai);
-            this.gbSearch.Location = new System.Drawing.Point(443, 151);
+            this.gbSearch.Location = new System.Drawing.Point(429, 178);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Size = new System.Drawing.Size(542, 44);
             this.gbSearch.TabIndex = 5;
@@ -123,7 +125,7 @@ namespace GUI
             // 
             this.lblTieuDe.AutoSize = true;
             this.lblTieuDe.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTieuDe.Location = new System.Drawing.Point(248, 198);
+            this.lblTieuDe.Location = new System.Drawing.Point(249, 241);
             this.lblTieuDe.Name = "lblTieuDe";
             this.lblTieuDe.Size = new System.Drawing.Size(516, 49);
             this.lblTieuDe.TabIndex = 3;
@@ -133,18 +135,18 @@ namespace GUI
             // 
             this.DGVPhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.DGVPhongTro.ColumnHeadersHeight = 30;
-            this.DGVPhongTro.Location = new System.Drawing.Point(50, 252);
+            this.DGVPhongTro.Location = new System.Drawing.Point(50, 293);
             this.DGVPhongTro.Name = "DGVPhongTro";
             this.DGVPhongTro.RowHeadersWidth = 80;
             this.DGVPhongTro.RowTemplate.Height = 24;
-            this.DGVPhongTro.Size = new System.Drawing.Size(935, 333);
+            this.DGVPhongTro.Size = new System.Drawing.Size(935, 292);
             this.DGVPhongTro.TabIndex = 2;
             // 
             // btnSearch
             // 
             this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnSearch.ForeColor = System.Drawing.Color.Yellow;
-            this.btnSearch.Location = new System.Drawing.Point(625, 62);
+            this.btnSearch.Location = new System.Drawing.Point(611, 89);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(92, 54);
             this.btnSearch.TabIndex = 1;
@@ -156,7 +158,7 @@ namespace GUI
             // 
             this.btnDel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnDel.ForeColor = System.Drawing.Color.Yellow;
-            this.btnDel.Location = new System.Drawing.Point(455, 62);
+            this.btnDel.Location = new System.Drawing.Point(441, 89);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(92, 54);
             this.btnDel.TabIndex = 1;
@@ -168,7 +170,7 @@ namespace GUI
             // 
             this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnUpdate.ForeColor = System.Drawing.Color.Yellow;
-            this.btnUpdate.Location = new System.Drawing.Point(281, 62);
+            this.btnUpdate.Location = new System.Drawing.Point(267, 89);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(92, 54);
             this.btnUpdate.TabIndex = 1;
@@ -180,7 +182,7 @@ namespace GUI
             // 
             this.butDefault.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.butDefault.ForeColor = System.Drawing.Color.Yellow;
-            this.butDefault.Location = new System.Drawing.Point(108, 151);
+            this.butDefault.Location = new System.Drawing.Point(94, 178);
             this.butDefault.Name = "butDefault";
             this.butDefault.Size = new System.Drawing.Size(134, 54);
             this.butDefault.TabIndex = 1;
@@ -192,7 +194,7 @@ namespace GUI
             // 
             this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.btnAdd.ForeColor = System.Drawing.Color.Yellow;
-            this.btnAdd.Location = new System.Drawing.Point(108, 62);
+            this.btnAdd.Location = new System.Drawing.Point(94, 89);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(92, 54);
             this.btnAdd.TabIndex = 1;
@@ -203,10 +205,20 @@ namespace GUI
             // txtSearch
             // 
             this.txtSearch.Font = new System.Drawing.Font("Times New Roman", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(767, 71);
+            this.txtSearch.Location = new System.Drawing.Point(753, 98);
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(155, 34);
             this.txtSearch.TabIndex = 0;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Palatino Linotype", 22.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(336, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(367, 49);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Danh sách phòng trọ";
             // 
             // FormDSPhong
             // 
@@ -244,5 +256,6 @@ namespace GUI
         private System.Windows.Forms.CheckBox cbTen;
         private System.Windows.Forms.CheckBox cbLoai;
         private System.Windows.Forms.Button butDefault;
+        private System.Windows.Forms.Label label1;
     }
 }

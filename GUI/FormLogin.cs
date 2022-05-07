@@ -47,7 +47,15 @@ namespace GUI
                 fCT.dExit = new FormMenuChuTro.myDel(xuathien);
                 fCT.Show();
                 this.Hide();
+            } 
+            else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
+            {
+                FormMenuNhanVien fNV = new FormMenuNhanVien();
+                fNV.dExit = new FormMenuNhanVien.myDel(xuathien);
+                fNV.Show();
+                this.Hide();
             }
+
         }
         private void xuathien()
         {

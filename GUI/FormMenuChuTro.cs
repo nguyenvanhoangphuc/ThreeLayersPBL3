@@ -27,11 +27,11 @@ namespace GUI
                 pnlDSPhong.BackColor = SystemColors.ButtonHighlight;
             }
 
-            if (pnlNguoiDung.BackColor != SystemColors.ButtonHighlight)
+            if (pnlQLNV.BackColor != SystemColors.ButtonHighlight)
             {
-                lblUser.ForeColor = SystemColors.ActiveCaptionText;
-                lblUser.MouseLeave += new EventHandler(this.lbl_MouseLeave);
-                pnlNguoiDung.BackColor = SystemColors.ButtonHighlight;
+                lblQLNV.ForeColor = SystemColors.ActiveCaptionText;
+                lblQLNV.MouseLeave += new EventHandler(this.lbl_MouseLeave);
+                pnlQLNV.BackColor = SystemColors.ButtonHighlight;
             }
 
             if (pnlLoaiPhong.BackColor != SystemColors.ButtonHighlight)
@@ -101,11 +101,6 @@ namespace GUI
         {
             ((Label)sender).ForeColor = SystemColors.ActiveCaptionText;
         }
-        
-        private void xuathien()
-        {
-            this.Show(); 
-        }
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
@@ -117,14 +112,58 @@ namespace GUI
         {
             Default(); 
             panel4.Hide();
-            lblDSNguoiThue.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
-            pnlDSNguoiThue.BackColor = SystemColors.ControlDarkDark;
-            lblDSNguoiThue.ForeColor = Color.Blue;
-            FormNguoiThue f = new FormNguoiThue();
+            lblLoaiPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
+            lblLoaiPhong.ForeColor = Color.Blue;
+            
+        }
+
+        private void lblTraTien_Click(object sender, EventArgs e)
+        {
+            Default();
+            panel4.Hide();
+            lblTraTien.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlTraTien.BackColor = SystemColors.ControlDarkDark;
+            lblTraTien.ForeColor = Color.Blue;
+            FormTraTien f = new FormTraTien();
+            f.MdiParent = this;
+            f.Show(); 
+        }
+
+        private void lblDatPhong_Click(object sender, EventArgs e)
+        {
+            Default();
+            panel4.Hide();
+            lblDatPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlDatPhong.BackColor = SystemColors.ControlDarkDark;
+            lblDatPhong.ForeColor = Color.Blue;
+            FormDatPhong f = new FormDatPhong();
             f.MdiParent = this;
             f.Show();
         }
 
-        
+        private void lblThongKe_Click(object sender, EventArgs e)
+        {
+            Default();
+            panel4.Hide();
+            lblThongKe.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlThongKe.BackColor = SystemColors.ControlDarkDark;
+            lblThongKe.ForeColor = Color.Blue;
+            FormThongKe f = new FormThongKe();
+            f.MdiParent = this;
+            f.Show();
+        }
+
+        private void lblQLNV_Click(object sender, EventArgs e)
+        {
+            Default();
+            panel4.Hide();
+            lblQLNV.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlQLNV.BackColor = SystemColors.ControlDarkDark;
+            lblQLNV.ForeColor = Color.Blue;
+            FormQLNhanVien f = new FormQLNhanVien();
+            f.MdiParent=this;
+            f.Show(); 
+        }
     }
 }

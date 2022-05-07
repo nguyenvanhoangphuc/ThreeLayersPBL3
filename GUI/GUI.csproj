@@ -52,6 +52,12 @@
     <Compile Include="AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDSPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,16 +76,49 @@
     <Compile Include="FormMenuChuTro.Designer.cs">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuNhanVien.Designer.cs">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLNhanVien.Designer.cs">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNguoiThue.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormNguoiThue.Designer.cs">
       <DependentUpon>FormNguoiThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLTB.Designer.cs">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThongKe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThongKe.Designer.cs">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraTien.Designer.cs">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AddPhong.resx">
       <DependentUpon>AddPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
@@ -90,8 +129,23 @@
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuNhanVien.resx">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNhanVien.resx">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNguoiThue.resx">
       <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLTB.resx">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThongKe.resx">
+      <DependentUpon>FormThongKe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraTien.resx">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

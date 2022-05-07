@@ -44,3 +44,9 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.csproj.CoreCom
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.csproj.CopyComplete
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.exe
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.pdb
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormTraTien.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormQLTB.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormQLNhanVien.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormDatPhong.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormThongKe.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormMenuNhanVien.resources
