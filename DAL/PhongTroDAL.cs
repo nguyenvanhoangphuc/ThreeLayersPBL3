@@ -23,9 +23,14 @@ namespace DAL
             }
             private set { }
         }
-        public DataTable GetDSPhongTro()
+        public List<PhongTro> GetDSPhongTro()
         {
-            return DBHelper.Instance.GetRecords("select * from PhongTro"); ; 
+            List<PhongTro> list = new List<PhongTro>();
+            foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro").Rows)
+            {
+                list.Add(GetPhongByDataRow(i));
+            }
+            return list;
         }
 
         public string AddPhongTro(PhongTro phongTro, string ID)
@@ -51,14 +56,44 @@ namespace DAL
             }
         }
 
-        public DataTable SearchData(PhongTro pt)
+        public string GetIDByTenLP(string tenLP)
         {
-            string query = "select * from PhongTro where ID = ''";
+            DataTable dt = DBHelper.Instance.GetRecords("select * from LoaiPhong where TenLoaiPhong = N'" + tenLP + "'");
+            DataRow dr = dt.Rows[0];
+            return GetLoaiPhongByDataRow(dr).IDLoaiPhong;
+        }
+
+        public string GetLoaiPhongByID(string iD_LoaiPhong)
+        {
+            DataTable dt = DBHelper.Instance.GetRecords("select * from LoaiPhong where IDLoaiPhong = '" + iD_LoaiPhong + "'");
+            DataRow dr = dt.Rows[0];
+            return GetLoaiPhongByDataRow(dr).TenLoaiPhong;
+        }
+
+        private LoaiPhong GetLoaiPhongByDataRow(DataRow dr)
+        {
+            return new LoaiPhong()
+            {
+                IDLoaiPhong = dr["IDLoaiPhong"].ToString(),
+                TenLoaiPhong = dr["TenLoaiPhong"].ToString(),
+                GiaThanh = Convert.ToInt32(dr["GiaThanh"].ToString()),
+                DanhSachIDThietBi = dr["IDDanhSachIDLTB"].ToString()
+            };
+        }
+
+        public List<PhongTroView> SearchData(PhongTroView pt)
+        {
+            string query = "select * from PhongTro inner join LoaiPhong on PhongTro.ID_LoaiPhong=LoaiPhong.IDLoaiPhong where ID = ''";
             if (pt.ID != "") query += " or ID like '%" + pt.ID + "%'"; 
             if (pt.TenPhong != "") query += " or TenPhong like '%" + pt.TenPhong + "%'";
-            if (pt.ID_LoaiPhong != "") query += " or ID_LoaiPhong like '%" + pt.ID_LoaiPhong + "%'";
+            if (pt.TenLoaiPhong != "") query += " or TenLoaiPhong like N'%" + pt.TenLoaiPhong + "%'";
             if (pt.TinhTrang != "") query += " or TinhTrang like '%" + pt.TinhTrang + "%'";
-            return DBHelper.Instance.GetRecords(query); 
+            List<PhongTroView> list = new List<PhongTroView>();
+            foreach (DataRow i in DBHelper.Instance.GetRecords(query).Rows)
+            {
+                list.Add(GetPhongViewByDataRow(i));
+            }
+            return list;
         }
 
         public PhongTro GetPhongByID(string id)
@@ -77,6 +112,16 @@ namespace DAL
                 ID_LoaiPhong = dr["ID_LoaiPhong"].ToString(),
                 TinhTrang = dr["TinhTrang"].ToString()
             }; 
+        }
+        private PhongTroView GetPhongViewByDataRow(DataRow dr)
+        {
+            return new PhongTroView()
+            {
+                ID = dr["ID"].ToString(),
+                TenPhong = dr["TenPhong"].ToString(),
+                TenLoaiPhong = dr["TenLoaiPhong"].ToString(),
+                TinhTrang = dr["TinhTrang"].ToString()
+            };
         }
 
         public void DeletePhong(string id)

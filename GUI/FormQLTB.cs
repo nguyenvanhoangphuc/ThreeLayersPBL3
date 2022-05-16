@@ -15,6 +15,16 @@ namespace GUI
         public FormQLTB()
         {
             InitializeComponent();
+            GUI(); 
+        }
+
+        public void GUI()
+        {
+            dataGridView1.DataSource = BLL.ThietBiBLL.Instance.GetAll_LTB();
+        }
+        private void button1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

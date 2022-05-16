@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNhanVien.Designer.cs">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +69,12 @@
     </Compile>
     <Compile Include="FormDSPhong.Designer.cs">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLoaiPhong.Designer.cs">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormLogin.cs">
       <SubType>Form</SubType>
@@ -112,8 +124,17 @@
     <Compile Include="FormTraTien.Designer.cs">
       <DependentUpon>FormTraTien.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormViewTB_LoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewTB_LoaiPhong.Designer.cs">
+      <DependentUpon>FormViewTB_LoaiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNhanVien.resx">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPhong.resx">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -122,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoaiPhong.resx">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormLogin.resx">
       <DependentUpon>FormLogin.cs</DependentUpon>
@@ -191,6 +215,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eyeClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-logo-icon-png-svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-logo-icon-png-svg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appliances.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

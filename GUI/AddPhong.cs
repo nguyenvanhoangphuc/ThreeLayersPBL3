@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL; 
 
 namespace GUI
 {
@@ -28,9 +29,9 @@ namespace GUI
             {
                 txtID.Text = id;
                 txtID.Enabled = false;
-                txtTen.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).TenPhong; 
-                txtLoai.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).ID_LoaiPhong;
-                txtTT.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).TinhTrang;
+                txtTen.Text = PhongTroBLL.Instance.GetPhongByID(id).TenPhong; 
+                txtLoai.Text = PhongTroBLL.Instance.GetLoaiPhongByID(PhongTroBLL.Instance.GetPhongByID(id).ID_LoaiPhong);
+                txtTT.Text = PhongTroBLL.Instance.GetPhongByID(id).TinhTrang;
             }
         }
         private void btnReset_Click(object sender, EventArgs e)
@@ -51,7 +52,7 @@ namespace GUI
             DTO.PhongTro phongTro = new DTO.PhongTro();
             phongTro.ID = txtID.Text;
             phongTro.TenPhong = txtTen.Text;
-            phongTro.ID_LoaiPhong = txtLoai.Text;
+            phongTro.ID_LoaiPhong = PhongTroBLL.Instance.getIDByTenLoaiPhong(txtLoai.Text);
             phongTro.TinhTrang = txtTT.Text;
 
             string value = BLL.PhongTroBLL.Instance.AddPhongTro(phongTro,ID); 

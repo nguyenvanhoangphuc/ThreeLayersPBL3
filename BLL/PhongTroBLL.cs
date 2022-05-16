@@ -26,9 +26,53 @@ namespace BLL
             private set { }
         }
 
-        public DataTable GetDSPhongTro()
+        public object GetAll_LTB()
         {
-            return PhongTroDAL.Instance.GetDSPhongTro();
+            throw new NotImplementedException();
+        }
+
+        public List<PhongTro> GetDSPhongTro() 
+        {
+            List<PhongTro> list = new List<PhongTro>();
+            list = PhongTroDAL.Instance.GetDSPhongTro();
+            return list;
+        }
+
+        public string GetLoaiPhongByID(string iD_LoaiPhong)
+        {
+            return PhongTroDAL.Instance.GetLoaiPhongByID(iD_LoaiPhong);
+        }
+        public string getIDByTenLoaiPhong(string tenLP)
+        {
+            return PhongTroDAL.Instance.GetIDByTenLP(tenLP);
+        }
+
+        public List<PhongTroView> GetDSPhongTroView()
+        {
+            List<PhongTroView> list = new List<PhongTroView>();
+            foreach (PhongTro i in GetDSPhongTro())
+            {
+                list.Add(new PhongTroView
+                {
+                    ID = i.ID,
+                    TenPhong = i.TenPhong,
+                    TenLoaiPhong = GetTenLPByID(i.ID_LoaiPhong),
+                    TinhTrang = i.TinhTrang
+                });  
+            }
+            return list;
+        }
+
+        private string GetTenLPByID(string iD_LoaiPhong)
+        {
+            foreach (LoaiPhong i in LoaiPhongDAL.Instance.GetAllLoaiPhong())
+            {
+                if (i.IDLoaiPhong == iD_LoaiPhong)
+                {
+                    return i.TenLoaiPhong;
+                }
+            }
+            return null;
         }
 
         public PhongTro GetPhongByID(string id)
@@ -66,7 +110,7 @@ namespace BLL
             PhongTroDAL.Instance.DeletePhong(id); 
         }
 
-        public DataTable SearchData(PhongTro pt)
+        public List<PhongTroView> SearchData(PhongTroView pt)
         {
             return PhongTroDAL.Instance.SearchData(pt); 
         }

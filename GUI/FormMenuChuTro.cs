@@ -115,7 +115,9 @@ namespace GUI
             lblLoaiPhong.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlLoaiPhong.BackColor = SystemColors.ControlDarkDark;
             lblLoaiPhong.ForeColor = Color.Blue;
-            
+            FormLoaiPhong f = new FormLoaiPhong();
+            f.MdiParent = this;
+            f.Show(); 
         }
 
         private void lblTraTien_Click(object sender, EventArgs e)

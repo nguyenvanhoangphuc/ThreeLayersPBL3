@@ -76,5 +76,20 @@ namespace GUI
             dExit(); 
             this.Close();
         }
+
+        private void pnlThongKe_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void FormMenuNhanVien_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblLoaiPhong_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

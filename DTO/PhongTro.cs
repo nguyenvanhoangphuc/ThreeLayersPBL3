@@ -18,7 +18,7 @@ namespace DTO
 
         [Required]
         [StringLength(10)]
-        public string ID_LoaiPhong { get; set; }
+        public string ID_LoaiPhong { get; set; } 
 
         [Required]
         [StringLength(50)]
