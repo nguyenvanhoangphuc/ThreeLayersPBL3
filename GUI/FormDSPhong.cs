@@ -21,7 +21,7 @@ namespace GUI
 
         private void ShowDGV()
         {
-            DGVPhongTro.DataSource =  PhongTroBLL.Instance.GetDSPhongTro(); 
+            DGVPhongTro.DataSource =  PhongTroBLL.Instance.GetDSPhongTroView(); //return List<PhongTroView>
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -65,11 +65,11 @@ namespace GUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Lấy dữ liệu check box đưa vào PhongTro
-            DTO.PhongTro pt = new DTO.PhongTro
+            DTO.PhongTroView pt = new DTO.PhongTroView
             {
                 ID = (cbID.Checked)?txtSearch.Text:"",
                 TenPhong = (cbTen.Checked) ? txtSearch.Text : "",
-                ID_LoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
+                TenLoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
                 TinhTrang = (cbTT.Checked) ? txtSearch.Text : ""
             };
             DGVPhongTro.DataSource = PhongTroBLL.Instance.SearchData(pt); 

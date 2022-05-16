@@ -50,3 +50,5 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormQLNhanVien
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormDatPhong.resources
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormThongKe.resources
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormMenuNhanVien.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormLoaiPhong.resources
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.AddNhanVien.resources

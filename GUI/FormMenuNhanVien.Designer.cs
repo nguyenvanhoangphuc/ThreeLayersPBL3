@@ -54,6 +54,9 @@ namespace GUI
             this.pnlTaiKhoan = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.label6 = new System.Windows.Forms.Label();
             this.pnlLoaiPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlThongKe.SuspendLayout();
@@ -68,6 +71,8 @@ namespace GUI
             this.panel2.SuspendLayout();
             this.pnlTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
             // lblLoaiPhong
@@ -81,6 +86,7 @@ namespace GUI
             this.lblLoaiPhong.Size = new System.Drawing.Size(114, 27);
             this.lblLoaiPhong.TabIndex = 7;
             this.lblLoaiPhong.Text = "Loại phòng";
+            this.lblLoaiPhong.Click += new System.EventHandler(this.lblLoaiPhong_Click);
             this.lblLoaiPhong.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblLoaiPhong.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
@@ -89,7 +95,7 @@ namespace GUI
             this.pnlLoaiPhong.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlLoaiPhong.Controls.Add(this.pictureBox8);
             this.pnlLoaiPhong.Controls.Add(this.lblLoaiPhong);
-            this.pnlLoaiPhong.Location = new System.Drawing.Point(17, 263);
+            this.pnlLoaiPhong.Location = new System.Drawing.Point(17, 226);
             this.pnlLoaiPhong.Margin = new System.Windows.Forms.Padding(4);
             this.pnlLoaiPhong.Name = "pnlLoaiPhong";
             this.pnlLoaiPhong.Size = new System.Drawing.Size(285, 60);
@@ -100,10 +106,12 @@ namespace GUI
             this.pictureBox8.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox8.Image = global::GUI.Properties.Resources.roomtype;
             this.pictureBox8.Location = new System.Drawing.Point(4, 4);
             this.pictureBox8.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox8.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox8.TabIndex = 7;
             this.pictureBox8.TabStop = false;
             // 
@@ -139,21 +147,24 @@ namespace GUI
             this.pnlThongKe.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.pnlThongKe.Controls.Add(this.pictureBox2);
             this.pnlThongKe.Controls.Add(this.lblThongKe);
-            this.pnlThongKe.Location = new System.Drawing.Point(17, 373);
+            this.pnlThongKe.Location = new System.Drawing.Point(17, 394);
             this.pnlThongKe.Margin = new System.Windows.Forms.Padding(4);
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(285, 60);
             this.pnlThongKe.TabIndex = 6;
+            this.pnlThongKe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlThongKe_Paint);
             // 
             // pictureBox2
             // 
             this.pictureBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox2.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox2.Image = global::GUI.Properties.Resources.Thongke;
+            this.pictureBox2.Location = new System.Drawing.Point(4, 4);
             this.pictureBox2.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox2.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox2.TabIndex = 7;
             this.pictureBox2.TabStop = false;
             // 
@@ -174,10 +185,12 @@ namespace GUI
             this.pictureBox7.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox7.Image = global::GUI.Properties.Resources.appliances;
             this.pictureBox7.Location = new System.Drawing.Point(4, 4);
             this.pictureBox7.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox7.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox7.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox7.TabIndex = 7;
             this.pictureBox7.TabStop = false;
             // 
@@ -210,10 +223,12 @@ namespace GUI
             // pictureBox1
             // 
             this.pictureBox1.BackColor = System.Drawing.SystemColors.AppWorkspace;
+            this.pictureBox1.Image = global::GUI.Properties.Resources.Exit;
             this.pictureBox1.Location = new System.Drawing.Point(181, 0);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(56, 50);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 3;
             this.pictureBox1.TabStop = false;
             // 
@@ -287,7 +302,7 @@ namespace GUI
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Palatino Linotype", 64.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(117, 50);
+            this.label2.Location = new System.Drawing.Point(122, 50);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(807, 142);
             this.label2.TabIndex = 0;
@@ -344,10 +359,12 @@ namespace GUI
             this.pictureBox3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox3.Location = new System.Drawing.Point(4, 2);
+            this.pictureBox3.Image = global::GUI.Properties.Resources.TaiKhoan;
+            this.pictureBox3.Location = new System.Drawing.Point(4, 4);
             this.pictureBox3.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(67, 52);
+            this.pictureBox3.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 7;
             this.pictureBox3.TabStop = false;
             // 
@@ -365,6 +382,46 @@ namespace GUI
             this.lblTaiKhoan.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblTaiKhoan.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.panel1.Controls.Add(this.pictureBox4);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Location = new System.Drawing.Point(17, 312);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(285, 60);
+            this.panel1.TabIndex = 8;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox4.Image = global::GUI.Properties.Resources.roomtype;
+            this.pictureBox4.Location = new System.Drawing.Point(4, 4);
+            this.pictureBox4.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(80, 18);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(164, 27);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Lịch sử sửa chữa";
+            this.label6.Click += new System.EventHandler(this.lblLoaiPhong_Click);
+            this.label6.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.label6.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            // 
             // FormMenuNhanVien
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -375,6 +432,7 @@ namespace GUI
             this.Controls.Add(this.pnlThoat);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lblQuanLiNhaTro);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlLoaiPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlDSThietBi);
@@ -384,6 +442,7 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenuNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Load += new System.EventHandler(this.FormMenuNhanVien_Load);
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -405,6 +464,9 @@ namespace GUI
             this.pnlTaiKhoan.ResumeLayout(false);
             this.pnlTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -437,5 +499,8 @@ namespace GUI
         private System.Windows.Forms.Panel pnlTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblTaiKhoan;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.Label label6;
     }
 }
