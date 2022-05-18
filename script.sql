@@ -1,6 +1,6 @@
 USE [quanlyphongtro]
 GO
-/****** Object:  Table [dbo].[DanhSachIDLTB]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[DanhSachIDLTB]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -16,20 +16,25 @@ CREATE TABLE [dbo].[DanhSachIDLTB](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LichSuSuaChua]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[LichSuSuaChua]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[LichSuSuaChua](
+	[ID_LichSuSuaChua] [nchar](10) NOT NULL,
 	[IDNhanVien] [nchar](10) NOT NULL,
 	[IDPhong] [nchar](10) NOT NULL,
-	[ID_ThietBi] [nchar](10) NOT NULL,
+	[ID_LoaiThietBi] [nchar](10) NOT NULL,
 	[NgaySuaChua] [date] NOT NULL,
-	[SoTienSuaChua] [int] NOT NULL
+	[SoTienSuaChua] [int] NOT NULL,
+ CONSTRAINT [PK_LichSuSuaChua] PRIMARY KEY CLUSTERED 
+(
+	[ID_LichSuSuaChua] ASC
+)WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[LoaiPhong]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -44,7 +49,7 @@ CREATE TABLE [dbo].[LoaiPhong](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[LoaiThietBi]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[LoaiThietBi]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -58,7 +63,7 @@ CREATE TABLE [dbo].[LoaiThietBi](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NguoiDung]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[NguoiDung]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -76,7 +81,7 @@ CREATE TABLE [dbo].[NguoiDung](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[NguoiThue]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[NguoiThue]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -92,7 +97,7 @@ CREATE TABLE [dbo].[NguoiThue](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[PhongTro]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[PhongTro]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -111,7 +116,7 @@ CREATE TABLE [dbo].[PhongTro](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[QLDatPhong]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[QLDatPhong]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -121,7 +126,7 @@ CREATE TABLE [dbo].[QLDatPhong](
 	[ID_Phong] [nchar](10) NOT NULL
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[TaiKhoan]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -136,7 +141,7 @@ CREATE TABLE [dbo].[TaiKhoan](
 )WITH (PAD_INDEX = OFF, STATISTICS_NORECOMPUTE = OFF, IGNORE_DUP_KEY = OFF, ALLOW_ROW_LOCKS = ON, ALLOW_PAGE_LOCKS = ON, OPTIMIZE_FOR_SEQUENTIAL_KEY = OFF) ON [PRIMARY]
 ) ON [PRIMARY]
 GO
-/****** Object:  Table [dbo].[ThietBi]    Script Date: 5/16/2022 8:58:42 PM ******/
+/****** Object:  Table [dbo].[ThietBi]    Script Date: 5/18/2022 3:49:26 PM ******/
 SET ANSI_NULLS ON
 GO
 SET QUOTED_IDENTIFIER ON
@@ -203,12 +208,12 @@ INSERT [dbo].[NguoiThue] ([HoTen], [SDT], [QueQuan], [CCCD]) VALUES (N'Nguyễn 
 INSERT [dbo].[NguoiThue] ([HoTen], [SDT], [QueQuan], [CCCD]) VALUES (N'Nguyễn Công Cường', N'0333333330', N'Tam Kì', N'102')
 INSERT [dbo].[NguoiThue] ([HoTen], [SDT], [QueQuan], [CCCD]) VALUES (N'Trần Thanh Nguyên', N'0444444444', N'Cẩm Lệ', N'1234')
 GO
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'1         ', N'P1', N'01        ', 1, CAST(N'2021-09-18' AS Date), 100, 0)
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'2         ', N'P2', N'02        ', 1, CAST(N'2020-08-12' AS Date), 200, 0)
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'3         ', N'P3', N'03        ', 1, CAST(N'2021-12-06' AS Date), 500, 0)
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'4         ', N'P4', N'04        ', 0, NULL, 0, NULL)
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'5         ', N'P5', N'01        ', 0, NULL, 0, NULL)
-INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'6         ', N'P6', N'02        ', 0, NULL, 0, NULL)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'1         ', N'P1', N'1         ', 1, CAST(N'2021-09-18' AS Date), 100, 0)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'2         ', N'P2', N'2         ', 1, CAST(N'2020-08-12' AS Date), 200, 0)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'3         ', N'P3', N'3         ', 1, CAST(N'2021-12-06' AS Date), 500, 0)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'4         ', N'P4', N'4         ', 0, NULL, 0, NULL)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'5         ', N'P5', N'1         ', 0, NULL, 0, NULL)
+INSERT [dbo].[PhongTro] ([ID], [TenPhong], [ID_LoaiPhong], [TinhTrang], [NgayThue], [SoChuDien], [TienHienTai]) VALUES (N'6         ', N'P6', N'2         ', 0, NULL, 0, NULL)
 GO
 INSERT [dbo].[QLDatPhong] ([SDT], [ID_Phong]) VALUES (N'011111222', N'1         ')
 INSERT [dbo].[QLDatPhong] ([SDT], [ID_Phong]) VALUES (N'0333333330', N'2         ')
@@ -228,13 +233,58 @@ INSERT [dbo].[ThietBi] ([ID Phòng], [ID Loại thiết bị], [Tình trạng]) 
 INSERT [dbo].[ThietBi] ([ID Phòng], [ID Loại thiết bị], [Tình trạng]) VALUES (N'4         ', N'1         ', 0)
 INSERT [dbo].[ThietBi] ([ID Phòng], [ID Loại thiết bị], [Tình trạng]) VALUES (N'4         ', N'3         ', 0)
 GO
+ALTER TABLE [dbo].[DanhSachIDLTB]  WITH CHECK ADD  CONSTRAINT [FK_DanhSachIDLTB_LoaiPhong] FOREIGN KEY([IDLoaiPhong])
+REFERENCES [dbo].[LoaiPhong] ([IDLoaiPhong])
+GO
+ALTER TABLE [dbo].[DanhSachIDLTB] CHECK CONSTRAINT [FK_DanhSachIDLTB_LoaiPhong]
+GO
+ALTER TABLE [dbo].[DanhSachIDLTB]  WITH CHECK ADD  CONSTRAINT [FK_DanhSachIDLTB_LoaiThietBi] FOREIGN KEY([IDLoaiThietBi])
+REFERENCES [dbo].[LoaiThietBi] ([IDLoaiThietBi])
+GO
+ALTER TABLE [dbo].[DanhSachIDLTB] CHECK CONSTRAINT [FK_DanhSachIDLTB_LoaiThietBi]
+GO
+ALTER TABLE [dbo].[LichSuSuaChua]  WITH CHECK ADD  CONSTRAINT [FK_LichSuSuaChua_NguoiDung] FOREIGN KEY([IDNhanVien])
+REFERENCES [dbo].[NguoiDung] ([ID])
+GO
+ALTER TABLE [dbo].[LichSuSuaChua] CHECK CONSTRAINT [FK_LichSuSuaChua_NguoiDung]
+GO
+ALTER TABLE [dbo].[LichSuSuaChua]  WITH CHECK ADD  CONSTRAINT [FK_LichSuSuaChua_PhongTro] FOREIGN KEY([IDPhong])
+REFERENCES [dbo].[PhongTro] ([ID])
+GO
+ALTER TABLE [dbo].[LichSuSuaChua] CHECK CONSTRAINT [FK_LichSuSuaChua_PhongTro]
+GO
+ALTER TABLE [dbo].[LichSuSuaChua]  WITH CHECK ADD  CONSTRAINT [FK_LichSuSuaChua_ThietBi] FOREIGN KEY([IDPhong], [ID_LoaiThietBi])
+REFERENCES [dbo].[ThietBi] ([ID Phòng], [ID Loại thiết bị])
+GO
+ALTER TABLE [dbo].[LichSuSuaChua] CHECK CONSTRAINT [FK_LichSuSuaChua_ThietBi]
+GO
 ALTER TABLE [dbo].[NguoiDung]  WITH CHECK ADD  CONSTRAINT [FK_NguoiDung_TaiKhoan] FOREIGN KEY([ID])
 REFERENCES [dbo].[TaiKhoan] ([ID])
 GO
 ALTER TABLE [dbo].[NguoiDung] CHECK CONSTRAINT [FK_NguoiDung_TaiKhoan]
 GO
+ALTER TABLE [dbo].[PhongTro]  WITH CHECK ADD  CONSTRAINT [FK_PhongTro_LoaiPhong] FOREIGN KEY([ID_LoaiPhong])
+REFERENCES [dbo].[LoaiPhong] ([IDLoaiPhong])
+GO
+ALTER TABLE [dbo].[PhongTro] CHECK CONSTRAINT [FK_PhongTro_LoaiPhong]
+GO
+ALTER TABLE [dbo].[QLDatPhong]  WITH CHECK ADD  CONSTRAINT [FK_QLDatPhong_NguoiThue] FOREIGN KEY([SDT])
+REFERENCES [dbo].[NguoiThue] ([SDT])
+GO
+ALTER TABLE [dbo].[QLDatPhong] CHECK CONSTRAINT [FK_QLDatPhong_NguoiThue]
+GO
+ALTER TABLE [dbo].[QLDatPhong]  WITH CHECK ADD  CONSTRAINT [FK_QLDatPhong_PhongTro] FOREIGN KEY([ID_Phong])
+REFERENCES [dbo].[PhongTro] ([ID])
+GO
+ALTER TABLE [dbo].[QLDatPhong] CHECK CONSTRAINT [FK_QLDatPhong_PhongTro]
+GO
 ALTER TABLE [dbo].[ThietBi]  WITH CHECK ADD  CONSTRAINT [FK_ThietBi_LoaiThietBi] FOREIGN KEY([ID Phòng])
 REFERENCES [dbo].[LoaiThietBi] ([IDLoaiThietBi])
 GO
 ALTER TABLE [dbo].[ThietBi] CHECK CONSTRAINT [FK_ThietBi_LoaiThietBi]
+GO
+ALTER TABLE [dbo].[ThietBi]  WITH CHECK ADD  CONSTRAINT [FK_ThietBi_PhongTro] FOREIGN KEY([ID Phòng])
+REFERENCES [dbo].[PhongTro] ([ID])
+GO
+ALTER TABLE [dbo].[ThietBi] CHECK CONSTRAINT [FK_ThietBi_PhongTro]
 GO
