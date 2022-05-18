@@ -36,11 +36,11 @@ namespace DAL
         }
         public string GetTenTBByID_LTB(string id)
         {
-            return DBHelper.Instance.GetRecords("select [Tên thiết bị] from LoaiThietBi where [ID Loại thiết bị]='" + id + "' ").Rows[0][0].ToString();
+            return DBHelper.Instance.GetRecords("select TenThietBi from LoaiThietBi where IDLoaiThietBi='" + id + "' ").Rows[0][0].ToString();
         }
         public string GetID_Ten(string id)
         {
-            DataTable dt = DBHelper.Instance.GetRecords("select [ID Loại thiết bị] from LoaiThietBi where [Tên thiết bị]= N'" + id + "' ");
+            DataTable dt = DBHelper.Instance.GetRecords("select IDLoaiThietBi from LoaiThietBi where TenThietBi= N'" + id + "' ");
             if (dt.Rows.Count == 0)
             {
                 return "Thiết bị không tồn tại!";
@@ -51,10 +51,8 @@ namespace DAL
         {
             return new LoaiThietBi
             {
-                ID_Loại_thiết_bị = i[0].ToString(),
-                Tên_thiết_bị = i[1].ToString(),
-                Giá = Convert.ToInt32(i[2].ToString()),
-                Số_lượng = Convert.ToInt16(i[3].ToString())
+                IDLoaiThietBi = i[0].ToString(),
+                TenThietBi = i[1].ToString()
             };
         }
     }

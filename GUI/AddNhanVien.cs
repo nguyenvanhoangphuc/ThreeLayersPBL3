@@ -51,30 +51,47 @@ namespace GUI
                 case "requied_ID":
                     MessageBox.Show("ID không được để trống!");
                     return;
-                case "requied_TenPhong":
-                    MessageBox.Show("Tên phòng không được để trống!");
+                case "requied_Ten":
+                    MessageBox.Show("Tên nhân viên không được để trống!");
                     return;
-                case "requied_ID_LoaiPhong":
-                    MessageBox.Show("Loại phòng không được để trống!");
+                case "requied_QueQuan":
+                    MessageBox.Show("Quê quán nhân viên không được để trống!");
                     return;
-                case "requied_TT":
-                    MessageBox.Show("Tình trạng không được để trống!");
+                case "requied_SDT":
+                    MessageBox.Show("SDT nhân viên không được để trống!");
+                    return;
+                case "requied_CCCD":
+                    MessageBox.Show("CCCD nhân viên không được để trống!");
                     return;
                 case "added":
-                    MessageBox.Show("Đã thêm thành công phòng mới!");
+                    MessageBox.Show("Đã thêm thành công nhân viên mới!");
                     //show lai DGVPhongTro
                     dShow();
                     this.Close();
                     return;
                 case "updated":
-                    MessageBox.Show("Đã chỉnh sửa thành công phòng này!");
+                    MessageBox.Show("Đã chỉnh sửa thành công nhân viên này!");
                     dShow();
                     this.Close();
                     return;
                 case "show message trung ID":
-                    MessageBox.Show("ID không hợp lệ! Đã tồn tại ID phòng này.");
+                    MessageBox.Show("ID không hợp lệ! Đã tồn tại ID nhân viên này.");
                     return;
             }
+        }
+
+        private void btnCancel_Click(object sender, EventArgs e)
+        {
+            this.Close(); 
+        }
+
+        private void btnReset_Click(object sender, EventArgs e)
+        {
+            if (ID == "") txtID.Text = "";
+            txtTen.Text = "";
+            txtQueQuan.Text = "";
+            txtSDT.Text = "";
+            txtCCCD.Text = "";
         }
     }
 }

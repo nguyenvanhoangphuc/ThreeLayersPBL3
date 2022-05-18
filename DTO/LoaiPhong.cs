@@ -1,4 +1,4 @@
-﻿namespace DTO
+namespace DTO
 {
     using System;
     using System.Collections.Generic;
@@ -9,6 +9,13 @@
     [Table("LoaiPhong")]
     public partial class LoaiPhong
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public LoaiPhong()
+        {
+            DanhSachIDLTBs = new HashSet<DanhSachIDLTB>();
+            PhongTroes = new HashSet<PhongTro>();
+        }
+
         [Key]
         [StringLength(10)]
         public string IDLoaiPhong { get; set; }
@@ -19,8 +26,10 @@
 
         public int GiaThanh { get; set; }
 
-        [Required]
-        [StringLength(50)]
-        public string DanhSachIDThietBi { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DanhSachIDLTB> DanhSachIDLTBs { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhongTro> PhongTroes { get; set; }
     }
 }

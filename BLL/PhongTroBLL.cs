@@ -12,6 +12,7 @@ namespace BLL
 {
     public class PhongTroBLL
     {
+        ModelQLPT db;
         private static PhongTroBLL _Instance;
         public static PhongTroBLL Instance
         {
@@ -25,10 +26,35 @@ namespace BLL
             }
             private set { }
         }
+        public PhongTroBLL()
+        {
+            db = new ModelQLPT();
+        }
 
         public object GetAll_LTB()
         {
             throw new NotImplementedException();
+        }
+
+        public List<CBBItem> GetAll_LoaiPhongTro()
+        {
+            List<CBBItem> list = new List<CBBItem>();
+            foreach (LoaiPhong i in GetDSLoaiPhongTro())
+            {
+                list.Add(new CBBItem
+                {
+                    ID = i.IDLoaiPhong,
+                    TenLoaiPhong = i.TenLoaiPhong
+                });
+            }
+            return list;
+        }
+
+        private List<LoaiPhong> GetDSLoaiPhongTro()
+        {
+            List<LoaiPhong> list = new List<LoaiPhong>();
+            list = PhongTroDAL.Instance.GetDSLoaiPhong();
+            return list;
         }
 
         public List<PhongTro> GetDSPhongTro() 
@@ -57,7 +83,7 @@ namespace BLL
                     ID = i.ID,
                     TenPhong = i.TenPhong,
                     TenLoaiPhong = GetTenLPByID(i.ID_LoaiPhong),
-                    TinhTrang = i.TinhTrang
+                    TinhTrang = Convert.ToString(i.TinhTrang)
                 });  
             }
             return list;
@@ -95,11 +121,6 @@ namespace BLL
             if (phongTro.ID_LoaiPhong == "")
             {
                 return "requied_ID_LoaiPhong";
-            }
-
-            if (phongTro.TinhTrang == "")
-            {
-                return "requied_TT";
             }
 
             return PhongTroDAL.Instance.AddPhongTro(phongTro,ID);

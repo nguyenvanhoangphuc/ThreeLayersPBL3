@@ -9,6 +9,12 @@ namespace DTO
     [Table("NguoiDung")]
     public partial class NguoiDung
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public NguoiDung()
+        {
+            LichSuSuaChuas = new HashSet<LichSuSuaChua>();
+        }
+
         [StringLength(10)]
         public string ID { get; set; }
 
@@ -31,6 +37,9 @@ namespace DTO
         [Required]
         [StringLength(50)]
         public string TuCach { get; set; }
+
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichSuSuaChua> LichSuSuaChuas { get; set; }
 
         public virtual TaiKhoan TaiKhoan { get; set; }
     }
