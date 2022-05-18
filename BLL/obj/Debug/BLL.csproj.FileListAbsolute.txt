@@ -22,3 +22,4 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\BLL\obj\Debug\BLL.csproj.CoreCom
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\BLL\obj\Debug\BLL.csproj.CopyComplete
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\BLL\obj\Debug\BLL.dll
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\BLL\obj\Debug\BLL.pdb
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\BLL\bin\Debug\EntityFramework.xml

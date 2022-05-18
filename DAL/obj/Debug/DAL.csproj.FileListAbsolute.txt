@@ -18,3 +18,5 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCom
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.dll
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.xml

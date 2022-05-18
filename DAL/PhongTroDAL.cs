@@ -45,15 +45,25 @@ namespace DAL
                 }
                 else
                 {
-                    DBHelper.Instance.ExecuteDB("insert into PhongTro values ('" + phongTro.ID + "','" + phongTro.TenPhong + "','" + phongTro.ID_LoaiPhong + "','" + phongTro.TinhTrang + "')");
+                    DBHelper.Instance.ExecuteDB("insert into PhongTro (ID, TenPhong, ID_LoaiPhong, TinhTrang, SoChuDien) values ('" + phongTro.ID + "','" + phongTro.TenPhong + "','" + phongTro.ID_LoaiPhong + "','" + phongTro.TinhTrang + "', "+phongTro.SoChuDien+")");
                     return "added";
                 }
             }
             else
             {
-                DBHelper.Instance.ExecuteDB("update PhongTro set TenPhong ='"+phongTro.TenPhong+"', ID_LoaiPhong='"+phongTro.ID_LoaiPhong+"', TinhTrang='"+phongTro.TinhTrang+"' where ID = '"+phongTro.ID+"'");
+                DBHelper.Instance.ExecuteDB("update PhongTro set TenPhong ='"+phongTro.TenPhong+"', ID_LoaiPhong='"+phongTro.ID_LoaiPhong+"', TinhTrang='"+phongTro.TinhTrang+"', SoChuDien ="+phongTro.SoChuDien+" where ID = '"+phongTro.ID+"'");
                 return "updated"; 
             }
+        }
+
+        public List<LoaiPhong> GetDSLoaiPhong()
+        {
+            List<LoaiPhong> list = new List<LoaiPhong>();
+            foreach (DataRow i in DBHelper.Instance.GetRecords("select * from LoaiPhong").Rows)
+            {
+                list.Add(GetLoaiPhongByDataRow(i));
+            }
+            return list;
         }
 
         public string GetIDByTenLP(string tenLP)
@@ -76,8 +86,7 @@ namespace DAL
             {
                 IDLoaiPhong = dr["IDLoaiPhong"].ToString(),
                 TenLoaiPhong = dr["TenLoaiPhong"].ToString(),
-                GiaThanh = Convert.ToInt32(dr["GiaThanh"].ToString()),
-                DanhSachIDThietBi = dr["IDDanhSachIDLTB"].ToString()
+                GiaThanh = Convert.ToInt32(dr["GiaThanh"].ToString())
             };
         }
 
@@ -87,7 +96,7 @@ namespace DAL
             if (pt.ID != "") query += " or ID like '%" + pt.ID + "%'"; 
             if (pt.TenPhong != "") query += " or TenPhong like '%" + pt.TenPhong + "%'";
             if (pt.TenLoaiPhong != "") query += " or TenLoaiPhong like N'%" + pt.TenLoaiPhong + "%'";
-            if (pt.TinhTrang != "") query += " or TinhTrang like '%" + pt.TinhTrang + "%'";
+            if (pt.TinhTrang != "") query += " or TinhTrang = '" + pt.TinhTrang + "'";
             List<PhongTroView> list = new List<PhongTroView>();
             foreach (DataRow i in DBHelper.Instance.GetRecords(query).Rows)
             {
@@ -110,7 +119,7 @@ namespace DAL
                 ID = dr["ID"].ToString(),
                 TenPhong = dr["TenPhong"].ToString(),
                 ID_LoaiPhong = dr["ID_LoaiPhong"].ToString(),
-                TinhTrang = dr["TinhTrang"].ToString()
+                TinhTrang = Convert.ToBoolean(dr["TinhTrang"].ToString())
             }; 
         }
         private PhongTroView GetPhongViewByDataRow(DataRow dr)

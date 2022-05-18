@@ -9,6 +9,12 @@ namespace DTO
     [Table("ThietBi")]
     public partial class ThietBi
     {
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        public ThietBi()
+        {
+            LichSuSuaChuas = new HashSet<LichSuSuaChua>();
+        }
+
         [Key]
         [Column("ID Phòng", Order = 0)]
         [StringLength(10)]
@@ -22,6 +28,11 @@ namespace DTO
         [Column("Tình trạng")]
         public bool Tình_trạng { get; set; }
 
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<LichSuSuaChua> LichSuSuaChuas { get; set; }
+
         public virtual LoaiThietBi LoaiThietBi { get; set; }
+
+        public virtual PhongTro PhongTro { get; set; }
     }
 }

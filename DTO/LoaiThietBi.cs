@@ -12,23 +12,20 @@ namespace DTO
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public LoaiThietBi()
         {
+            DanhSachIDLTBs = new HashSet<DanhSachIDLTB>();
             ThietBis = new HashSet<ThietBi>();
         }
 
         [Key]
-        [Column("ID Loại thiết bị")]
         [StringLength(10)]
-        public string ID_Loại_thiết_bị { get; set; }
+        public string IDLoaiThietBi { get; set; }
 
-        [Column("Tên thiết bị")]
         [Required]
         [StringLength(50)]
-        public string Tên_thiết_bị { get; set; }
+        public string TenThietBi { get; set; }
 
-        public decimal? Giá { get; set; }
-
-        [Column("Số lượng")]
-        public short Số_lượng { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<DanhSachIDLTB> DanhSachIDLTBs { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ThietBi> ThietBis { get; set; }

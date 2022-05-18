@@ -24,9 +24,29 @@ namespace BLL
             }
             private set { }
         }
-        public DataTable GetDSNhanVien()
+
+        public List<NhanVienView> GetDSNhanVienView()
         {
-            return NhanVienDAL.Instance.GetDSPhongTro();
+            List<NhanVienView> list = new List<NhanVienView> ();
+            foreach (NhanVien i in GetDSNhanVien())
+            {
+                list.Add(new NhanVienView
+                {
+                    ID = i.ID,
+                    Ten = i.Ten,
+                    QueQuan = i.QueQuan,
+                    SDT = i.SDT,
+                    CCCD = i.CCCD
+                });
+            }
+            return list;
+        }
+
+        public List<NhanVien> GetDSNhanVien()
+        {
+            List<NhanVien> list = new List<NhanVien>();
+            list = NhanVienDAL.Instance.GetDSNhanVien();
+            return list;
         }
 
         public NhanVien GetNhanVienByID(string id)
@@ -62,6 +82,16 @@ namespace BLL
             }
 
             return NhanVienDAL.Instance.AddNhanVien(nhanvien, iD);
+        }
+
+        public void DeleteNhanVien(string id)
+        {
+            NhanVienDAL.Instance.DeleteNhanVien(id);
+        }
+
+        public List<NhanVienView> SearchDataNV(NhanVienView nv)
+        {
+            return NhanVienDAL.Instance.SearchDataNV(nv);
         }
     }
 }

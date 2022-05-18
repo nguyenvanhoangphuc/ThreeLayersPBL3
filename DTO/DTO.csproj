@@ -50,10 +50,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CBBItem.cs" />
+    <Compile Include="DanhSachIDLTB.cs" />
+    <Compile Include="LichSuSuaChua.cs" />
     <Compile Include="LoaiPhong.cs" />
     <Compile Include="LoaiThietBi.cs" />
+    <Compile Include="ModelQLPT.cs" />
     <Compile Include="NguoiDung.cs" />
+    <Compile Include="NguoiThue.cs" />
     <Compile Include="NhanVien.cs" />
+    <Compile Include="NhanVienView.cs" />
     <Compile Include="PhongTro.cs" />
     <Compile Include="PhongTroView.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

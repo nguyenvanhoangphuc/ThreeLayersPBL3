@@ -31,13 +31,13 @@
             this.panel4 = new System.Windows.Forms.Panel();
             this.lblChoDuyet = new System.Windows.Forms.Label();
             this.gbSearch = new System.Windows.Forms.GroupBox();
-            this.cbID = new System.Windows.Forms.CheckBox();
-            this.cbTT = new System.Windows.Forms.CheckBox();
             this.cbTen = new System.Windows.Forms.CheckBox();
-            this.cbLoai = new System.Windows.Forms.CheckBox();
+            this.cbCCCD = new System.Windows.Forms.CheckBox();
+            this.cbQueQuan = new System.Windows.Forms.CheckBox();
+            this.cbSDT = new System.Windows.Forms.CheckBox();
             this.label1 = new System.Windows.Forms.Label();
             this.lblTieuDe = new System.Windows.Forms.Label();
-            this.DGVPhongTro = new System.Windows.Forms.DataGridView();
+            this.DGVNhanVien = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnUpdate = new System.Windows.Forms.Button();
@@ -46,7 +46,7 @@
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.panel4.SuspendLayout();
             this.gbSearch.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVNhanVien)).BeginInit();
             this.SuspendLayout();
             // 
             // panel4
@@ -56,7 +56,7 @@
             this.panel4.Controls.Add(this.gbSearch);
             this.panel4.Controls.Add(this.label1);
             this.panel4.Controls.Add(this.lblTieuDe);
-            this.panel4.Controls.Add(this.DGVPhongTro);
+            this.panel4.Controls.Add(this.DGVNhanVien);
             this.panel4.Controls.Add(this.btnSearch);
             this.panel4.Controls.Add(this.btnDel);
             this.panel4.Controls.Add(this.btnUpdate);
@@ -82,10 +82,10 @@
             // 
             // gbSearch
             // 
-            this.gbSearch.Controls.Add(this.cbID);
-            this.gbSearch.Controls.Add(this.cbTT);
             this.gbSearch.Controls.Add(this.cbTen);
-            this.gbSearch.Controls.Add(this.cbLoai);
+            this.gbSearch.Controls.Add(this.cbCCCD);
+            this.gbSearch.Controls.Add(this.cbQueQuan);
+            this.gbSearch.Controls.Add(this.cbSDT);
             this.gbSearch.Location = new System.Drawing.Point(408, 242);
             this.gbSearch.Name = "gbSearch";
             this.gbSearch.Size = new System.Drawing.Size(542, 44);
@@ -93,45 +93,45 @@
             this.gbSearch.TabStop = false;
             this.gbSearch.Text = "Search theo:";
             // 
-            // cbID
-            // 
-            this.cbID.AutoSize = true;
-            this.cbID.Location = new System.Drawing.Point(33, 18);
-            this.cbID.Name = "cbID";
-            this.cbID.Size = new System.Drawing.Size(53, 20);
-            this.cbID.TabIndex = 4;
-            this.cbID.Text = "Ten";
-            this.cbID.UseVisualStyleBackColor = true;
-            // 
-            // cbTT
-            // 
-            this.cbTT.AutoSize = true;
-            this.cbTT.Location = new System.Drawing.Point(428, 18);
-            this.cbTT.Name = "cbTT";
-            this.cbTT.Size = new System.Drawing.Size(66, 20);
-            this.cbTT.TabIndex = 4;
-            this.cbTT.Text = "CCCD";
-            this.cbTT.UseVisualStyleBackColor = true;
-            // 
             // cbTen
             // 
             this.cbTen.AutoSize = true;
-            this.cbTen.Location = new System.Drawing.Point(153, 18);
+            this.cbTen.Location = new System.Drawing.Point(33, 18);
             this.cbTen.Name = "cbTen";
-            this.cbTen.Size = new System.Drawing.Size(87, 20);
+            this.cbTen.Size = new System.Drawing.Size(53, 20);
             this.cbTen.TabIndex = 4;
-            this.cbTen.Text = "Quê quán";
+            this.cbTen.Text = "Ten";
             this.cbTen.UseVisualStyleBackColor = true;
             // 
-            // cbLoai
+            // cbCCCD
             // 
-            this.cbLoai.AutoSize = true;
-            this.cbLoai.Location = new System.Drawing.Point(310, 18);
-            this.cbLoai.Name = "cbLoai";
-            this.cbLoai.Size = new System.Drawing.Size(57, 20);
-            this.cbLoai.TabIndex = 4;
-            this.cbLoai.Text = "SDT";
-            this.cbLoai.UseVisualStyleBackColor = true;
+            this.cbCCCD.AutoSize = true;
+            this.cbCCCD.Location = new System.Drawing.Point(428, 18);
+            this.cbCCCD.Name = "cbCCCD";
+            this.cbCCCD.Size = new System.Drawing.Size(66, 20);
+            this.cbCCCD.TabIndex = 4;
+            this.cbCCCD.Text = "CCCD";
+            this.cbCCCD.UseVisualStyleBackColor = true;
+            // 
+            // cbQueQuan
+            // 
+            this.cbQueQuan.AutoSize = true;
+            this.cbQueQuan.Location = new System.Drawing.Point(153, 18);
+            this.cbQueQuan.Name = "cbQueQuan";
+            this.cbQueQuan.Size = new System.Drawing.Size(87, 20);
+            this.cbQueQuan.TabIndex = 4;
+            this.cbQueQuan.Text = "Quê quán";
+            this.cbQueQuan.UseVisualStyleBackColor = true;
+            // 
+            // cbSDT
+            // 
+            this.cbSDT.AutoSize = true;
+            this.cbSDT.Location = new System.Drawing.Point(310, 18);
+            this.cbSDT.Name = "cbSDT";
+            this.cbSDT.Size = new System.Drawing.Size(57, 20);
+            this.cbSDT.TabIndex = 4;
+            this.cbSDT.Text = "SDT";
+            this.cbSDT.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -153,16 +153,16 @@
             this.lblTieuDe.TabIndex = 3;
             this.lblTieuDe.Text = "Bảng danh sách các nhân viên";
             // 
-            // DGVPhongTro
+            // DGVNhanVien
             // 
-            this.DGVPhongTro.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.DGVPhongTro.ColumnHeadersHeight = 30;
-            this.DGVPhongTro.Location = new System.Drawing.Point(50, 363);
-            this.DGVPhongTro.Name = "DGVPhongTro";
-            this.DGVPhongTro.RowHeadersWidth = 80;
-            this.DGVPhongTro.RowTemplate.Height = 24;
-            this.DGVPhongTro.Size = new System.Drawing.Size(935, 222);
-            this.DGVPhongTro.TabIndex = 2;
+            this.DGVNhanVien.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.DGVNhanVien.ColumnHeadersHeight = 30;
+            this.DGVNhanVien.Location = new System.Drawing.Point(50, 363);
+            this.DGVNhanVien.Name = "DGVNhanVien";
+            this.DGVNhanVien.RowHeadersWidth = 80;
+            this.DGVNhanVien.RowTemplate.Height = 24;
+            this.DGVNhanVien.Size = new System.Drawing.Size(935, 222);
+            this.DGVNhanVien.TabIndex = 2;
             // 
             // btnSearch
             // 
@@ -174,6 +174,7 @@
             this.btnSearch.TabIndex = 1;
             this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = false;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnDel
             // 
@@ -185,6 +186,7 @@
             this.btnDel.TabIndex = 1;
             this.btnDel.Text = "Delete";
             this.btnDel.UseVisualStyleBackColor = false;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnUpdate
             // 
@@ -196,6 +198,7 @@
             this.btnUpdate.TabIndex = 1;
             this.btnUpdate.Text = "Update";
             this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // butDefault
             // 
@@ -207,6 +210,7 @@
             this.butDefault.TabIndex = 1;
             this.butDefault.Text = "Default";
             this.butDefault.UseVisualStyleBackColor = false;
+            this.butDefault.Click += new System.EventHandler(this.butDefault_Click);
             // 
             // btnAdd
             // 
@@ -243,7 +247,7 @@
             this.panel4.PerformLayout();
             this.gbSearch.ResumeLayout(false);
             this.gbSearch.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.DGVPhongTro)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DGVNhanVien)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -252,12 +256,12 @@
 
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.GroupBox gbSearch;
-        private System.Windows.Forms.CheckBox cbID;
-        private System.Windows.Forms.CheckBox cbTT;
         private System.Windows.Forms.CheckBox cbTen;
-        private System.Windows.Forms.CheckBox cbLoai;
+        private System.Windows.Forms.CheckBox cbCCCD;
+        private System.Windows.Forms.CheckBox cbQueQuan;
+        private System.Windows.Forms.CheckBox cbSDT;
         private System.Windows.Forms.Label lblTieuDe;
-        private System.Windows.Forms.DataGridView DGVPhongTro;
+        private System.Windows.Forms.DataGridView DGVNhanVien;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.Button btnDel;
         private System.Windows.Forms.Button btnUpdate;
