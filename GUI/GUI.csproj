@@ -132,6 +132,34 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMK.cs" />
+    <Compile Include="QuenMK.designer.cs">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclDangKy.cs" />
+    <Compile Include="uclDangKy.designer.cs">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclDangNhap.cs" />
+    <Compile Include="uclDangNhap.designer.cs">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclSetMK.cs" />
+    <Compile Include="uclSetMK.designer.cs">
+      <DependentUpon>uclSetMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclTKePhong.cs" />
+    <Compile Include="uclTKePhong.designer.cs">
+      <DependentUpon>uclTKePhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclTKeThang.cs" />
+    <Compile Include="uclTKeThang.designer.cs">
+      <DependentUpon>uclTKeThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclXacNhanMK.cs" />
+    <Compile Include="uclXacNhanMK.designer.cs">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNhanVien.resx">
       <DependentUpon>AddNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -181,6 +209,27 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDangKy.resx">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDangNhap.resx">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSetMK.resx">
+      <DependentUpon>uclSetMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclTKePhong.resx">
+      <DependentUpon>uclTKePhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclTKeThang.resx">
+      <DependentUpon>uclTKeThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclXacNhanMK.resx">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

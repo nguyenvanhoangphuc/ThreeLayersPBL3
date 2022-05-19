@@ -4,12 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-using DAL; 
+using DAL;
+using System.Windows.Forms;
 
 namespace BLL
 {
     public class TaiKhoanBLL
     {
+        
         private static TaiKhoanBLL _Instance;
         public static TaiKhoanBLL Instance
         {
@@ -42,6 +44,21 @@ namespace BLL
         public string CheckTuCach(string id)
         {
             return TaiKhoanDAL.Instance.CheckTuCach(id);
+        }
+        public string CheckEmail(string email)
+        {
+            if(email.Length<11||email.Substring(email.Length-10) != "@gmail.com" )
+            {
+                return "Email không hợp lệ";
+            }
+            else
+            {
+                return TaiKhoanDAL.Instance.CheckEmail(email);
+            }
+        }
+        public string SetMK(string email, string MK)
+        {
+            return TaiKhoanDAL.Instance.SetMK(email, MK);
         }
     }
 }

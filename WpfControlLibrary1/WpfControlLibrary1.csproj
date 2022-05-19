@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Update="QuenMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclSetMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclTKePhong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclTKeThang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Update="uclXacNhanMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+
+</Project>

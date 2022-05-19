@@ -40,8 +40,7 @@ namespace DAL
             {
                 IDLoaiPhong = i["IDLoaiPhong"].ToString(),
                 TenLoaiPhong = i["TenLoaiPhong"].ToString(),
-                GiaThanh = Convert.ToInt32(i["GiaThanh"].ToString()),
-                DanhSachIDThietBi = i["IDDanhSachIDLTB"].ToString()
+                GiaThanh = Convert.ToInt32(i["GiaThanh"].ToString())
             }; 
         }
     }

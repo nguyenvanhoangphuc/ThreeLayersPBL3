@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Data;
-using DTO;
 using DAL;
+using DTO;
 
 namespace BLL
 {

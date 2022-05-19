@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace GUI
 {
     internal static class Program
@@ -16,7 +17,7 @@ namespace GUI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMenuChuTro());
+            Application.Run(new FormLogin());
         }
     }
 }

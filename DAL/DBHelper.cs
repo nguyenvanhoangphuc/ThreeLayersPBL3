@@ -10,7 +10,7 @@ namespace DAL
 {
     public class DBHelper
     {
-        private static string s = @"Data Source=LAPTOP-KTJ09GK5\SQLEXPRESS;Initial Catalog=quanlyphongtro;Integrated Security=True";
+        private static string s = @"Data Source=.\sqlexpress;Initial Catalog=quanlyphongtro;Integrated Security=True";
         private static DBHelper _Instance;
         public static DBHelper Instance
         {

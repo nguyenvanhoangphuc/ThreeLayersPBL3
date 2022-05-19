@@ -31,10 +31,17 @@ namespace BLL
             throw new NotImplementedException();
         }
 
-        public List<PhongTro> GetDSPhongTro() 
+        public List<PhongTro> GetDSPhongTro(int month = 0) 
         {
             List<PhongTro> list = new List<PhongTro>();
-            list = PhongTroDAL.Instance.GetDSPhongTro();
+            list = PhongTroDAL.Instance.GetDSPhongTro(month);
+            return list;
+        }
+
+        public List<String> GetDSTenPhongTro()
+        {
+            List<string> list = new List<string>();
+            list = PhongTroDAL.Instance.GetDSTenPhongTro();
             return list;
         }
 
@@ -47,10 +54,10 @@ namespace BLL
             return PhongTroDAL.Instance.GetIDByTenLP(tenLP);
         }
 
-        public List<PhongTroView> GetDSPhongTroView()
+        public List<PhongTroView> GetDSPhongTroView(int month=0)
         {
             List<PhongTroView> list = new List<PhongTroView>();
-            foreach (PhongTro i in GetDSPhongTro())
+            foreach (PhongTro i in GetDSPhongTro(month))
             {
                 list.Add(new PhongTroView
                 {
