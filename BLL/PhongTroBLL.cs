@@ -31,6 +31,12 @@ namespace BLL
             throw new NotImplementedException();
         }
 
+        public List<PhongTro> GetDSPhongTro()
+        {
+            List<PhongTro> list = new List<PhongTro>();
+            list = PhongTroDAL.Instance.GetDSPhongTro();
+            return list;
+        }
         public List<PhongTro> GetDSPhongTro(int month = 0) 
         {
             List<PhongTro> list = new List<PhongTro>();
@@ -54,6 +60,21 @@ namespace BLL
             return PhongTroDAL.Instance.GetIDByTenLP(tenLP);
         }
 
+        public List<PhongTroView> GetDSPhongTroView()
+        {
+            List<PhongTroView> list = new List<PhongTroView>();
+            foreach (PhongTro i in GetDSPhongTro())
+            {
+                list.Add(new PhongTroView
+                {
+                    ID = i.ID,
+                    TenPhong = i.TenPhong,
+                    TenLoaiPhong = GetTenLPByID(i.ID_LoaiPhong),
+                    TinhTrang = Convert.ToString(i.TinhTrang)
+                });
+            }
+            return list;
+        }
         public List<PhongTroView> GetDSPhongTroView(int month=0)
         {
             List<PhongTroView> list = new List<PhongTroView>();
@@ -69,6 +90,7 @@ namespace BLL
             }
             return list;
         }
+
 
         private string GetTenLPByID(string iD_LoaiPhong)
         {

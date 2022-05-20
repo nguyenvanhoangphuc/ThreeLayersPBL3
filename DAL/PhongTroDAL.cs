@@ -5,7 +5,6 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace DAL
 {
@@ -24,38 +23,16 @@ namespace DAL
             }
             private set { }
         }
-        public List<PhongTro> GetDSPhongTro(int month = 0)
+        public List<PhongTro> GetDSPhongTro()
         {
             List<PhongTro> list = new List<PhongTro>();
-            if(month == 0)
-            {
-                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro").Rows)
-                {
-                    list.Add(GetPhongByDataRow(i));
-                }
-            }
-            else
-            {
-                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro where TinhTrang = 1 AND month(NgayThue)=" + month + "").Rows)
-                {
-                    list.Add(GetPhongByDataRow(i));
-                }
-            }
-            return list;
-        }
-        public List<string> GetDSTenPhongTro()
-        {
-            List<string> list = new List<string>();
             foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro").Rows)
             {
-                list.Add(i[0].ToString());
+                list.Add(GetPhongByDataRow(i));
             }
             return list;
         }
-        public int SLPhongThue(int month)
-        {
-           return DBHelper.Instance.GetRecords("select ID from PhongTro where month(NgayThue)="+month+"").Rows.Count;
-        }
+
         public string AddPhongTro(PhongTro phongTro, string ID)
         {
             DataTable dt = DBHelper.Instance.GetRecords("select ID from PhongTro where ID = '" + phongTro.ID + "'");
@@ -150,6 +127,40 @@ namespace DAL
         public void DeletePhong(string id)
         {
             DBHelper.Instance.ExecuteDB("delete from PhongTro where ID = '"+id+"'"); 
+        }
+        public List<PhongTro> GetDSPhongTro(int month = 0)
+        {
+            List<PhongTro> list = new List<PhongTro>();
+            if (month == 0)
+            {
+                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro").Rows)
+                {
+                    list.Add(GetPhongByDataRow(i));
+                }
+            }
+            else
+            {
+                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro where TinhTrang = 1 AND month(NgayThue)=" + month + "").Rows)
+                {
+                    list.Add(GetPhongByDataRow(i));
+                }
+            }
+            return list;
+        }
+
+        public int SLPhongThue(int month)
+        {
+            return DBHelper.Instance.GetRecords("select ID from PhongTro where month(NgayThue)=" + month + "").Rows.Count;
+        }
+
+        public List<string> GetDSTenPhongTro()
+        {
+            List<string> list = new List<string>();
+            foreach (DataRow i in DBHelper.Instance.GetRecords("select * from PhongTro").Rows)
+            {
+                list.Add(i[0].ToString());
+            }
+            return list;
         }
     }
 }

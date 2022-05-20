@@ -28,3 +28,13 @@ C:\Users\HP\source\repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCompileInp
 C:\Users\HP\source\repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\HP\source\repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
 C:\Users\HP\source\repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\bin\Debug\DAL.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\bin\Debug\DAL.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\bin\Debug\DTO.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\bin\Debug\DTO.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\bin\Debug\DTO.dll.config
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
