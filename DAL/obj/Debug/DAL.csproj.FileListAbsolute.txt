@@ -32,3 +32,15 @@ C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCompile
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\DAL.dll
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\DAL.pdb
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\DTO.dll
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\EntityFramework.dll
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\DTO.pdb
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\DTO.dll.config
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\bin\Debug\EntityFramework.xml
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\obj\Debug\DAL.dll
+C:\Users\cuong\OneDrive\ChuongTrinhKiSuCNTT\nam2\hk2\PBL3_DoAnCongNghePhanMem\DAL\obj\Debug\DAL.pdb
