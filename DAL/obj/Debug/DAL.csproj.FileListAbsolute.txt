@@ -20,3 +20,15 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.dll
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.xml
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\DAL.dll
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\DAL.pdb
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\DTO.dll
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.dll
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\DTO.pdb
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\DTO.dll.config
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\bin\Debug\EntityFramework.xml
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
+C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
