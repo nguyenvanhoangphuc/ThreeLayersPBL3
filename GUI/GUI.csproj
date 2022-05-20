@@ -82,12 +82,6 @@
     <Compile Include="FormLoaiPhong.Designer.cs">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormMenuChuTro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,12 +124,6 @@
     <Compile Include="FormThemThang.Designer.cs">
       <DependentUpon>FormThemThang.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
-    </Compile>
     <Compile Include="FormTraTien.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -168,9 +156,6 @@
     <EmbeddedResource Include="FormLoaiPhong.resx">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,9 +176,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormThemThang.resx">
       <DependentUpon>FormThemThang.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormThongKe.resx">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTraTien.resx">
       <DependentUpon>FormTraTien.cs</DependentUpon>

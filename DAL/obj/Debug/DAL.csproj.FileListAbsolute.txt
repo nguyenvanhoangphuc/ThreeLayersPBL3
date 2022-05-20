@@ -32,3 +32,15 @@ C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CoreCompile
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.csproj.CopyComplete
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.dll
 C:\Users\cuong\Source\Repos\ThreeLayersPBL3\DAL\obj\Debug\DAL.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\DAL.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\DAL.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\DTO.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\EntityFramework.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\DTO.pdb
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\DTO.dll.config
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\bin\Debug\EntityFramework.xml
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\obj\Debug\DAL.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\obj\Debug\DAL.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\obj\Debug\DAL.csproj.CopyComplete
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\obj\Debug\DAL.dll
+C:\Users\HP\source\repos\ThreeLayersPBL3\main\DAL\obj\Debug\DAL.pdb
