@@ -58,6 +58,12 @@
     <Compile Include="AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDSThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSThang.Designer.cs">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +118,18 @@
     <Compile Include="FormQLTB.Designer.cs">
       <DependentUpon>FormQLTB.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormSuaThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThang.Designer.cs">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemThang.Designer.cs">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormThongKe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -144,6 +162,9 @@
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormDSThang.resx">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormLoaiPhong.resx">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
@@ -164,6 +185,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormQLTB.resx">
       <DependentUpon>FormQLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThang.resx">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemThang.resx">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormThongKe.resx">
       <DependentUpon>FormThongKe.cs</DependentUpon>
