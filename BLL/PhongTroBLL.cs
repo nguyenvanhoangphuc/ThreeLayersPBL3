@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Forms;
-using DAL;
+﻿using DAL;
 using DTO;
+using System;
+using System.Collections.Generic;
 
 namespace BLL
 {
@@ -57,7 +52,7 @@ namespace BLL
             return list;
         }
 
-        public List<PhongTro> GetDSPhongTro() 
+        public List<PhongTro> GetDSPhongTro()
         {
             List<PhongTro> list = new List<PhongTro>();
             list = PhongTroDAL.Instance.GetDSPhongTro();
@@ -84,7 +79,7 @@ namespace BLL
                     TenPhong = i.TenPhong,
                     TenLoaiPhong = GetTenLPByID(i.ID_LoaiPhong),
                     TinhTrang = Convert.ToString(i.TinhTrang)
-                });  
+                });
             }
             return list;
         }
@@ -123,17 +118,17 @@ namespace BLL
                 return "requied_ID_LoaiPhong";
             }
 
-            return PhongTroDAL.Instance.AddPhongTro(phongTro,ID);
+            return PhongTroDAL.Instance.AddPhongTro(phongTro, ID);
         }
 
         public static void DeletePhong(string id)
         {
-            PhongTroDAL.Instance.DeletePhong(id); 
+            PhongTroDAL.Instance.DeletePhong(id);
         }
 
         public List<PhongTroView> SearchData(PhongTroView pt)
         {
-            return PhongTroDAL.Instance.SearchData(pt); 
+            return PhongTroDAL.Instance.SearchData(pt);
         }
     }
 }

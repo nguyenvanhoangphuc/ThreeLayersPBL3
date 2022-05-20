@@ -151,9 +151,6 @@ namespace GUI
             lblThongKe.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
             pnlThongKe.BackColor = SystemColors.ControlDarkDark;
             lblThongKe.ForeColor = Color.Blue;
-            FormThongKe f = new FormThongKe();
-            f.MdiParent = this;
-            f.Show();
         }
 
         private void lblQLNV_Click(object sender, EventArgs e)
