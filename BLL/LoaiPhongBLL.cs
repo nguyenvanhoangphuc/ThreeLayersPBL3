@@ -26,20 +26,18 @@ namespace BLL
 
         public DataTable hienthi()
         {
-            return DAL.DBHelper.Instance.GetRecords("select * from LoaiPhong");
+            return DBHelper.Instance.GetRecords("select * from LoaiPhong");
         }
 
 
         public DataTable GetThietBiCuaPhong(String Id)
         {
 
-            return DBHelper.Instance.GetRecords("select LoaiThietBi1.TenLoaiThietBi,DanhSachIDLTB.SoLuong from ((LoaiPhong inner join DanhSachIDLTB on LoaiPhong.IDDanhSachIDLTB = DanhSachIDLTB.IDDanhSachIDLTB) inner join LoaiThietBi1 on DanhSachIDLTB.IDLoaiThietBi = LoaiThietBi1.IDLoaiThietbi ) where LoaiPhong.IDDanhSachIDLTB = '" + Id + "'");
+            return DBHelper.Instance.GetRecords("select LoaiThietBi.TenThietBi,DanhSachIDLTB.SoLuong from ((LoaiPhong inner join DanhSachIDLTB on LoaiPhong.IDLoaiPhong = DanhSachIDLTB.IDLoaiPhong) inner join LoaiThietBi on DanhSachIDLTB.IDLoaiThietBi = LoaiThietBi.IDLoaiThietbi ) where LoaiPhong.IDLoaiPhong = '" + Id + "'");
         }
         public string GetTenLoaiPhong(String id)
         {
-
             return DBHelper.Instance.GetRecords("select TenLoaiPhong from LoaiPhong where IDLoaiPhong='" + id + "'").Rows[0][0].ToString();
-
         }
 
         

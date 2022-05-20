@@ -22,7 +22,7 @@ namespace GUI
         private void btnHienThi_Click(object sender, EventArgs e)
         {
             LoaiPhong lp = new LoaiPhong();
-            dgv.DataSource = BLL.LoaiPhongBLL.Instance.hienthi();
+            dgv.DataSource = LoaiPhongBLL.Instance.hienthi();
         }
 
         private void btnXemThietBi_Click(object sender, EventArgs e)

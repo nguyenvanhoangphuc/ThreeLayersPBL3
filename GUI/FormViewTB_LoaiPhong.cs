@@ -27,8 +27,8 @@ namespace GUI
         }
         public void GUI()
         {
-            txtTenLoaiPhong.Text = BLL.LoaiPhongBLL.Instance.GetTenLoaiPhong(IDLoaiPhong);
-            dgv.DataSource = BLL.LoaiPhongBLL.Instance.GetThietBiCuaPhong(IDLoaiPhong);
+            txtTenLoaiPhong.Text = LoaiPhongBLL.Instance.GetTenLoaiPhong(IDLoaiPhong);
+            dgv.DataSource = LoaiPhongBLL.Instance.GetThietBiCuaPhong(IDLoaiPhong);
         }
 
         private void button1_Click(object sender, EventArgs e)
