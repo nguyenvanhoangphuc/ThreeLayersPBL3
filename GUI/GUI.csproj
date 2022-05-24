@@ -58,6 +58,12 @@
     <Compile Include="AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormDSThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSThang.Designer.cs">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormDatPhong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -81,12 +87,6 @@
     </Compile>
     <Compile Include="FormLoaiPhong.Designer.cs">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
-    </Compile>
-    <Compile Include="FormLogin.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuChuTro.cs">
       <SubType>Form</SubType>
@@ -118,11 +118,17 @@
     <Compile Include="FormQLTB.Designer.cs">
       <DependentUpon>FormQLTB.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormThongKe.cs">
+    <Compile Include="FormSuaThang.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormThongKe.Designer.cs">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
+    <Compile Include="FormSuaThang.Designer.cs">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemThang.Designer.cs">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
     </Compile>
     <Compile Include="FormTraTien.cs">
       <SubType>Form</SubType>
@@ -150,14 +156,16 @@
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="FormLichSuSuaChua.resx">
       <DependentUpon>FormLichSuSuaChua.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="FormDSThang.resx">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+>>>>>>> main
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoaiPhong.resx">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
@@ -174,8 +182,11 @@
     <EmbeddedResource Include="FormQLTB.resx">
       <DependentUpon>FormQLTB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormThongKe.resx">
-      <DependentUpon>FormThongKe.cs</DependentUpon>
+    <EmbeddedResource Include="FormSuaThang.resx">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemThang.resx">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormTraTien.resx">
       <DependentUpon>FormTraTien.cs</DependentUpon>
