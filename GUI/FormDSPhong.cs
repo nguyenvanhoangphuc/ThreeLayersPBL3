@@ -91,5 +91,10 @@ namespace GUI
             f.Show();
             this.Close(); 
         }
+
+        private void FormDSPhong_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -9,23 +9,23 @@ using DTO;
 
 namespace DAL
 {
-    public class DAL_LoaiTB
+    public class LoaiThietBiDAL
     {
-        private static DAL_LoaiTB _Instance;
+        private static LoaiThietBiDAL _Instance;
 
-        public static DAL_LoaiTB Instance
+        public static LoaiThietBiDAL Instance
         {
             get
             {
                 if (_Instance == null)
                 {
-                    _Instance = new DAL_LoaiTB();
+                    _Instance = new LoaiThietBiDAL();
                 }
                 return _Instance;
             }
             private set { }
         }
-        private DAL_LoaiTB()
+        private LoaiThietBiDAL()
         {
 
         }
@@ -38,9 +38,9 @@ namespace DAL
         {
             return DBHelper.Instance.GetRecords("select TenThietBi from LoaiThietBi where IDLoaiThietBi='" + id + "' ").Rows[0][0].ToString();
         }
-        public string GetID_Ten(string id)
+        public string GetIDByTenLTB(string ten)
         {
-            DataTable dt = DBHelper.Instance.GetRecords("select IDLoaiThietBi from LoaiThietBi where TenThietBi= N'" + id + "' ");
+            DataTable dt = DBHelper.Instance.GetRecords("select IDLoaiThietBi from LoaiThietBi where TenThietBi= N'" + ten + "' ");
             if (dt.Rows.Count == 0)
             {
                 return "Thiết bị không tồn tại!";
@@ -54,6 +54,11 @@ namespace DAL
                 IDLoaiThietBi = i[0].ToString(),
                 TenThietBi = i[1].ToString()
             };
+        }
+
+        public void UpdateLTB(DanhSachIDLTB dsltb)
+        {
+            DBHelper.Instance.ExecuteDB($"update DanhSachIDLTB set SoLuong = {dsltb.SoLuong} where IDLoaiPhong = '{dsltb.IDLoaiPhong}' and IDLoaiThietBi = '{dsltb.IDLoaiThietBi}'");
         }
     }
 }

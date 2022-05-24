@@ -31,11 +31,6 @@ namespace BLL
             db = new ModelQLPT();
         }
 
-        public object GetAll_LTB()
-        {
-            throw new NotImplementedException();
-        }
-
         public List<CBBItem> GetAll_LoaiPhongTro()
         {
             List<CBBItem> list = new List<CBBItem>();
@@ -47,6 +42,49 @@ namespace BLL
                     TenLoaiPhong = i.TenLoaiPhong
                 });
             }
+            return list;
+        }
+
+        public List<DSLTBView> GetDSLTBViewByIDLoaiPhong(string iDLoaiPhong)
+        {
+            List<DSLTBView> list = new List<DSLTBView>();
+            foreach (DanhSachIDLTB i in GetDSLTBByIDLoaiPhong(iDLoaiPhong))
+            {
+                list.Add(new DSLTBView
+                {
+                    TenLoaiPhong = GetTenLPByID(i.IDLoaiPhong),
+                    TenLoaiThietBi = GetTenLTBByID(i.IDLoaiThietBi),
+                    SoLuong = i.SoLuong
+                });
+            }
+            return list;
+        }
+
+        private string GetTenLTBByID(string iDLoaiThietBi)
+        {
+            return PhongTroDAL.Instance.GetTenLTBByID(iDLoaiThietBi);
+        }
+
+        public void UpdateLTB(DSLTBView dstb)
+        {
+            DanhSachIDLTB dsltb = new DanhSachIDLTB
+            {
+                IDLoaiPhong = getIDByTenLoaiPhong(dstb.TenLoaiPhong),
+                IDLoaiThietBi = getIDByTenLoaiTB(dstb.TenLoaiThietBi),
+                SoLuong = dstb.SoLuong
+            };
+            LoaiThietBiDAL.Instance.UpdateLTB(dsltb);
+        }
+
+        private string getIDByTenLoaiTB(string tenLoaiThietBi)
+        {
+            return LoaiThietBiDAL.Instance.GetIDByTenLTB(tenLoaiThietBi);
+        }
+
+        private List<DanhSachIDLTB> GetDSLTBByIDLoaiPhong(string iDLoaiPhong)
+        {
+            List<DanhSachIDLTB> list = new List<DanhSachIDLTB>();
+            list = LoaiPhongDAL.Instance.GetDSLTBByIDLoaiPhong(iDLoaiPhong);
             return list;
         }
 

@@ -35,6 +35,13 @@ namespace GUI
                 pnlLoaiPhong.BackColor = SystemColors.ButtonHighlight;
             }
 
+            if (pnlLoaiPhong.BackColor != SystemColors.ButtonHighlight)
+            {
+                lblLoaiPhong.ForeColor = SystemColors.ActiveCaptionText;
+                lblLoaiPhong.MouseLeave += new EventHandler(this.lbl_MouseLeave);
+                pnlLoaiPhong.BackColor = SystemColors.ButtonHighlight;
+            }
+
             if (pnlTaiKhoan.BackColor != SystemColors.ButtonHighlight)
             {
                 lblTaiKhoan.ForeColor = SystemColors.ActiveCaptionText;
@@ -77,19 +84,32 @@ namespace GUI
             this.Close();
         }
 
-        private void pnlThongKe_Paint(object sender, PaintEventArgs e)
+        private void lblLichSuSuaChua_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void FormMenuNhanVien_Load(object sender, EventArgs e)
-        {
-
+            Default();
+            panel4.Hide();
+            lblLichSuSuaChua.MouseLeave -= new EventHandler(this.lbl_MouseLeave);
+            pnlLichSuSuaChua.BackColor = SystemColors.ControlDarkDark;
+            lblLichSuSuaChua.ForeColor = Color.Blue;
+            FormLichSuSuaChua f = new FormLichSuSuaChua();
+            f.MdiParent = this;
+            f.Show(); 
         }
 
         private void lblLoaiPhong_Click(object sender, EventArgs e)
         {
 
         }
+
+        private void lblThongKe_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTaiKhoan_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

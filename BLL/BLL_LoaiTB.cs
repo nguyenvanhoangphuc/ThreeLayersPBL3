@@ -32,7 +32,7 @@ namespace BLL
         }
         public DataTable GetAll_LTB()
         {
-            DataTable dt = DAL_LoaiTB.Instance.GetAll_LTB();
+            DataTable dt = LoaiThietBiDAL.Instance.GetAll_LTB();
             DataTable re = new DataTable();
             re.Columns.AddRange(new DataColumn[] {
                 new DataColumn { ColumnName = "Tên loại thiết bị", DataType = typeof(string) },
@@ -47,7 +47,7 @@ namespace BLL
         }
         public string GetIDLoaiTB_ByTenTB(string name)
         {
-            return DAL_LoaiTB.Instance.GetID_Ten(name);
+            return LoaiThietBiDAL.Instance.GetIDByTenLTB(name);
         }
     }
 }

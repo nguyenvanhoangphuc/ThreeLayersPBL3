@@ -56,6 +56,12 @@ namespace DAL
             }
         }
 
+        public string GetTenLTBByID(string iDLoaiThietBi)
+        {
+            DataTable dt = DBHelper.Instance.GetRecords("select * from LoaiThietBi where IDLoaiThietBi = '"+iDLoaiThietBi+"'");
+            return dt.Rows[0][1].ToString();
+        }
+
         public List<LoaiPhong> GetDSLoaiPhong()
         {
             List<LoaiPhong> list = new List<LoaiPhong>();

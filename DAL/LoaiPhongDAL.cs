@@ -43,5 +43,35 @@ namespace DAL
                 GiaThanh = Convert.ToInt32(i["GiaThanh"].ToString())
             }; 
         }
+
+        public List<DanhSachIDLTB> GetDSLTBByIDLoaiPhong(string iDLoaiPhong)
+        {
+            List<DanhSachIDLTB> list = new List<DanhSachIDLTB>();
+            if (iDLoaiPhong == "")
+            {
+                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from DanhSachIDLTB").Rows)
+                {
+                    list.Add(GetLoaiTBByDataRow(i));
+                }
+            }
+            else
+            {
+                foreach (DataRow i in DBHelper.Instance.GetRecords("select * from DanhSachIDLTB where IDLoaiPhong = '" + iDLoaiPhong + "'").Rows)
+                {
+                    list.Add(GetLoaiTBByDataRow(i));
+                }
+            }
+            return list;
+        }
+
+        private DanhSachIDLTB GetLoaiTBByDataRow(DataRow i)
+        {
+            return new DanhSachIDLTB
+            {
+                IDLoaiPhong = i["IDLoaiPhong"].ToString(),
+                IDLoaiThietBi = i["IDLoaiThietBi"].ToString(),
+                SoLuong = Convert.ToInt32(i["SoLuong"].ToString())
+            };
+        }
     }
 }

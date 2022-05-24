@@ -54,9 +54,9 @@ namespace GUI
             this.pnlTaiKhoan = new System.Windows.Forms.Panel();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.lblTaiKhoan = new System.Windows.Forms.Label();
-            this.panel1 = new System.Windows.Forms.Panel();
+            this.pnlLichSuSuaChua = new System.Windows.Forms.Panel();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.label6 = new System.Windows.Forms.Label();
+            this.lblLichSuSuaChua = new System.Windows.Forms.Label();
             this.pnlLoaiPhong.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.pnlThongKe.SuspendLayout();
@@ -71,7 +71,7 @@ namespace GUI
             this.panel2.SuspendLayout();
             this.pnlTaiKhoan.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            this.panel1.SuspendLayout();
+            this.pnlLichSuSuaChua.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             this.SuspendLayout();
             // 
@@ -139,6 +139,7 @@ namespace GUI
             this.lblThongKe.Size = new System.Drawing.Size(99, 27);
             this.lblThongKe.TabIndex = 7;
             this.lblThongKe.Text = "Thống kê";
+            this.lblThongKe.Click += new System.EventHandler(this.lblThongKe_Click);
             this.lblThongKe.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblThongKe.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
@@ -152,7 +153,6 @@ namespace GUI
             this.pnlThongKe.Name = "pnlThongKe";
             this.pnlThongKe.Size = new System.Drawing.Size(285, 60);
             this.pnlThongKe.TabIndex = 6;
-            this.pnlThongKe.Paint += new System.Windows.Forms.PaintEventHandler(this.pnlThongKe_Paint);
             // 
             // pictureBox2
             // 
@@ -379,19 +379,20 @@ namespace GUI
             this.lblTaiKhoan.Size = new System.Drawing.Size(104, 27);
             this.lblTaiKhoan.TabIndex = 7;
             this.lblTaiKhoan.Text = "Tài khoản";
+            this.lblTaiKhoan.Click += new System.EventHandler(this.lblTaiKhoan_Click);
             this.lblTaiKhoan.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblTaiKhoan.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
-            // panel1
+            // pnlLichSuSuaChua
             // 
-            this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.pictureBox4);
-            this.panel1.Controls.Add(this.label6);
-            this.panel1.Location = new System.Drawing.Point(17, 312);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(285, 60);
-            this.panel1.TabIndex = 8;
+            this.pnlLichSuSuaChua.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.pnlLichSuSuaChua.Controls.Add(this.pictureBox4);
+            this.pnlLichSuSuaChua.Controls.Add(this.lblLichSuSuaChua);
+            this.pnlLichSuSuaChua.Location = new System.Drawing.Point(17, 312);
+            this.pnlLichSuSuaChua.Margin = new System.Windows.Forms.Padding(4);
+            this.pnlLichSuSuaChua.Name = "pnlLichSuSuaChua";
+            this.pnlLichSuSuaChua.Size = new System.Drawing.Size(285, 60);
+            this.pnlLichSuSuaChua.TabIndex = 8;
             // 
             // pictureBox4
             // 
@@ -407,20 +408,20 @@ namespace GUI
             this.pictureBox4.TabIndex = 7;
             this.pictureBox4.TabStop = false;
             // 
-            // label6
+            // lblLichSuSuaChua
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label6.Location = new System.Drawing.Point(80, 18);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(164, 27);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Lịch sử sửa chữa";
-            this.label6.Click += new System.EventHandler(this.lblLoaiPhong_Click);
-            this.label6.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
-            this.label6.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
+            this.lblLichSuSuaChua.AutoSize = true;
+            this.lblLichSuSuaChua.Font = new System.Drawing.Font("Palatino Linotype", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblLichSuSuaChua.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.lblLichSuSuaChua.Location = new System.Drawing.Point(80, 18);
+            this.lblLichSuSuaChua.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblLichSuSuaChua.Name = "lblLichSuSuaChua";
+            this.lblLichSuSuaChua.Size = new System.Drawing.Size(164, 27);
+            this.lblLichSuSuaChua.TabIndex = 7;
+            this.lblLichSuSuaChua.Text = "Lịch sử sửa chữa";
+            this.lblLichSuSuaChua.Click += new System.EventHandler(this.lblLichSuSuaChua_Click);
+            this.lblLichSuSuaChua.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
+            this.lblLichSuSuaChua.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 
             // FormMenuNhanVien
             // 
@@ -432,7 +433,7 @@ namespace GUI
             this.Controls.Add(this.pnlThoat);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.lblQuanLiNhaTro);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlLichSuSuaChua);
             this.Controls.Add(this.pnlLoaiPhong);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.pnlDSThietBi);
@@ -442,7 +443,6 @@ namespace GUI
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormMenuNhanVien";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Load += new System.EventHandler(this.FormMenuNhanVien_Load);
             this.pnlLoaiPhong.ResumeLayout(false);
             this.pnlLoaiPhong.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -464,8 +464,8 @@ namespace GUI
             this.pnlTaiKhoan.ResumeLayout(false);
             this.pnlTaiKhoan.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
+            this.pnlLichSuSuaChua.ResumeLayout(false);
+            this.pnlLichSuSuaChua.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -499,8 +499,8 @@ namespace GUI
         private System.Windows.Forms.Panel pnlTaiKhoan;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Label lblTaiKhoan;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlLichSuSuaChua;
         private System.Windows.Forms.PictureBox pictureBox4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label lblLichSuSuaChua;
     }
 }

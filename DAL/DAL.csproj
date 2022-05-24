@@ -42,7 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DAL_LoaiTB.cs" />
+    <Compile Include="LoaiThietBiDAL.cs" />
     <Compile Include="DBHelper.cs" />
     <Compile Include="LoaiPhongDAL.cs" />
     <Compile Include="NguoiThueDAL.cs" />

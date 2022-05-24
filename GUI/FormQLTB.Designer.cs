@@ -29,13 +29,15 @@
         private void InitializeComponent()
         {
             this.panel30 = new System.Windows.Forms.Panel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.cbbLoaiPhongTro = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.checkBox3 = new System.Windows.Forms.CheckBox();
             this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnSearch = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnUpdate = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label2 = new System.Windows.Forms.Label();
             this.panel30.SuspendLayout();
@@ -46,10 +48,13 @@
             // panel30
             // 
             this.panel30.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel30.Controls.Add(this.label3);
+            this.panel30.Controls.Add(this.cbbLoaiPhongTro);
+            this.panel30.Controls.Add(this.label1);
             this.panel30.Controls.Add(this.groupBox1);
             this.panel30.Controls.Add(this.textBox1);
             this.panel30.Controls.Add(this.btnSearch);
-            this.panel30.Controls.Add(this.button1);
+            this.panel30.Controls.Add(this.btnUpdate);
             this.panel30.Controls.Add(this.dataGridView1);
             this.panel30.Controls.Add(this.label2);
             this.panel30.Location = new System.Drawing.Point(13, 13);
@@ -58,32 +63,51 @@
             this.panel30.Size = new System.Drawing.Size(1034, 611);
             this.panel30.TabIndex = 1;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(116, 292);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(205, 19);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Danh sách có thể chỉnh sửa";
+            // 
+            // cbbLoaiPhongTro
+            // 
+            this.cbbLoaiPhongTro.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold);
+            this.cbbLoaiPhongTro.FormattingEnabled = true;
+            this.cbbLoaiPhongTro.Location = new System.Drawing.Point(213, 145);
+            this.cbbLoaiPhongTro.Name = "cbbLoaiPhongTro";
+            this.cbbLoaiPhongTro.Size = new System.Drawing.Size(194, 31);
+            this.cbbLoaiPhongTro.TabIndex = 13;
+            this.cbbLoaiPhongTro.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiPhongTro_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(67, 148);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(140, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Loại phòng trọ:";
+            // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.checkBox3);
             this.groupBox1.Controls.Add(this.checkBox2);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Location = new System.Drawing.Point(382, 222);
+            this.groupBox1.Location = new System.Drawing.Point(620, 224);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(485, 69);
+            this.groupBox1.Size = new System.Drawing.Size(342, 69);
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Search theo:";
             // 
-            // checkBox3
-            // 
-            this.checkBox3.AutoSize = true;
-            this.checkBox3.Location = new System.Drawing.Point(347, 36);
-            this.checkBox3.Name = "checkBox3";
-            this.checkBox3.Size = new System.Drawing.Size(88, 20);
-            this.checkBox3.TabIndex = 0;
-            this.checkBox3.Text = "Tình trạng";
-            this.checkBox3.UseVisualStyleBackColor = true;
-            // 
             // checkBox2
             // 
             this.checkBox2.AutoSize = true;
-            this.checkBox2.Location = new System.Drawing.Point(192, 36);
+            this.checkBox2.Location = new System.Drawing.Point(216, 34);
             this.checkBox2.Name = "checkBox2";
             this.checkBox2.Size = new System.Drawing.Size(96, 20);
             this.checkBox2.TabIndex = 0;
@@ -93,7 +117,7 @@
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(41, 36);
+            this.checkBox1.Location = new System.Drawing.Point(58, 34);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(94, 20);
             this.checkBox1.TabIndex = 0;
@@ -102,38 +126,45 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(630, 156);
+            this.textBox1.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(780, 141);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(170, 22);
+            this.textBox1.Size = new System.Drawing.Size(170, 30);
             this.textBox1.TabIndex = 10;
             // 
             // btnSearch
             // 
-            this.btnSearch.Location = new System.Drawing.Point(437, 147);
+            this.btnSearch.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnSearch.ForeColor = System.Drawing.Color.Yellow;
+            this.btnSearch.Location = new System.Drawing.Point(659, 130);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(80, 40);
+            this.btnSearch.Size = new System.Drawing.Size(92, 54);
             this.btnSearch.TabIndex = 9;
             this.btnSearch.Text = "Search";
-            this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.UseVisualStyleBackColor = false;
             // 
-            // button1
+            // btnUpdate
             // 
-            this.button1.Location = new System.Drawing.Point(217, 147);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 40);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Update";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F);
+            this.btnUpdate.ForeColor = System.Drawing.Color.Yellow;
+            this.btnUpdate.Location = new System.Drawing.Point(472, 134);
+            this.btnUpdate.Name = "btnUpdate";
+            this.btnUpdate.Size = new System.Drawing.Size(92, 54);
+            this.btnUpdate.TabIndex = 9;
+            this.btnUpdate.Text = "Update";
+            this.btnUpdate.UseVisualStyleBackColor = false;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(70, 329);
+            this.dataGridView1.Location = new System.Drawing.Point(120, 329);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(892, 237);
+            this.dataGridView1.Size = new System.Drawing.Size(791, 237);
             this.dataGridView1.TabIndex = 8;
             // 
             // label2
@@ -172,11 +203,13 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.CheckBox checkBox3;
         private System.Windows.Forms.CheckBox checkBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button btnSearch;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnUpdate;
+        private System.Windows.Forms.ComboBox cbbLoaiPhongTro;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
     }
 }

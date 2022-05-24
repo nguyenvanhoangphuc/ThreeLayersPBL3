@@ -55,6 +55,7 @@
     <Compile Include="LichSuSuaChua.cs" />
     <Compile Include="LoaiPhong.cs" />
     <Compile Include="LoaiThietBi.cs" />
+    <Compile Include="DSLTBView.cs" />
     <Compile Include="ModelQLPT.cs" />
     <Compile Include="NguoiDung.cs" />
     <Compile Include="NguoiThue.cs" />

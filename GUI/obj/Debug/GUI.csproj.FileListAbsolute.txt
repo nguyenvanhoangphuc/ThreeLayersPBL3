@@ -54,3 +54,4 @@ F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormLoaiPhong.
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.AddNhanVien.resources
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\bin\Debug\EntityFramework.dll
 F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\bin\Debug\EntityFramework.xml
+F:\Data\ki4\PBL3\PBL3FormInForm\ThreeLayersPBL3\GUI\obj\Debug\GUI.FormLichSuSuaChua.resources
