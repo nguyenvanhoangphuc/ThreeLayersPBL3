@@ -13,8 +13,6 @@ namespace GUI
 {
     public partial class FormDSPhong : Form
     {
-        public delegate void myDel();
-        public myDel dExit;
         public FormDSPhong()
         {
             InitializeComponent();
@@ -23,7 +21,7 @@ namespace GUI
 
         private void ShowDGV()
         {
-            DGVPhongTro.DataSource =  PhongTroBLL.Instance.GetDSPhongTro(); 
+            DGVPhongTro.DataSource =  PhongTroBLL.Instance.GetDSPhongTroView(); //return List<PhongTroView>
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -45,7 +43,6 @@ namespace GUI
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
-            dExit();
             this.Close();
         }
 
@@ -68,11 +65,11 @@ namespace GUI
         private void btnSearch_Click(object sender, EventArgs e)
         {
             //Lấy dữ liệu check box đưa vào PhongTro
-            DTO.PhongTro pt = new DTO.PhongTro
+            DTO.PhongTroView pt = new DTO.PhongTroView
             {
                 ID = (cbID.Checked)?txtSearch.Text:"",
                 TenPhong = (cbTen.Checked) ? txtSearch.Text : "",
-                ID_LoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
+                TenLoaiPhong = (cbLoai.Checked) ? txtSearch.Text : "",
                 TinhTrang = (cbTT.Checked) ? txtSearch.Text : ""
             };
             DGVPhongTro.DataSource = PhongTroBLL.Instance.SearchData(pt); 
@@ -86,11 +83,6 @@ namespace GUI
             }
             txtSearch.Text = "";
             ShowDGV(); 
-        }
-
-        private void lblDSPhong_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void lblDSNguoiThue_Click(object sender, EventArgs e)

@@ -46,11 +46,29 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddNhanVien.Designer.cs">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddPhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddPhong.Designer.cs">
       <DependentUpon>AddPhong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDSThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDSThang.Designer.cs">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormDatPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDatPhong.Designer.cs">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormDSPhong.cs">
       <SubType>Form</SubType>
@@ -58,11 +76,11 @@
     <Compile Include="FormDSPhong.Designer.cs">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </Compile>
-    <Compile Include="FormLogin.cs">
+    <Compile Include="FormLoaiPhong.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FormLogin.Designer.cs">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <Compile Include="FormLoaiPhong.Designer.cs">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </Compile>
     <Compile Include="FormMenuChuTro.cs">
       <SubType>Form</SubType>
@@ -70,28 +88,97 @@
     <Compile Include="FormMenuChuTro.Designer.cs">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormMenuNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormMenuNhanVien.Designer.cs">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormQLNhanVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLNhanVien.Designer.cs">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormNguoiThue.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormNguoiThue.Designer.cs">
       <DependentUpon>FormNguoiThue.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormQLTB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormQLTB.Designer.cs">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormSuaThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormSuaThang.Designer.cs">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormThemThang.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThemThang.Designer.cs">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormTraTien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormTraTien.Designer.cs">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormViewTB_LoaiPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormViewTB_LoaiPhong.Designer.cs">
+      <DependentUpon>FormViewTB_LoaiPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddNhanVien.resx">
+      <DependentUpon>AddNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddPhong.resx">
       <DependentUpon>AddPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormDatPhong.resx">
+      <DependentUpon>FormDatPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormDSPhong.resx">
       <DependentUpon>FormDSPhong.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="FormLogin.resx">
-      <DependentUpon>FormLogin.cs</DependentUpon>
+    <EmbeddedResource Include="FormDSThang.resx">
+      <DependentUpon>FormDSThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLoaiPhong.resx">
+      <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FormMenuNhanVien.resx">
+      <DependentUpon>FormMenuNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLNhanVien.resx">
+      <DependentUpon>FormQLNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormNguoiThue.resx">
       <DependentUpon>FormNguoiThue.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormQLTB.resx">
+      <DependentUpon>FormQLTB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormSuaThang.resx">
+      <DependentUpon>FormSuaThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThemThang.resx">
+      <DependentUpon>FormThemThang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormTraTien.resx">
+      <DependentUpon>FormTraTien.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -137,6 +224,51 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eyeClose.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1111.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\images2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-logo-icon-png-svg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout-logo-icon-png-svg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\png-transparent-computer-icons-logout-angle-text-black2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Untitled2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\roomtype.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\appliances.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BLL; 
 
 namespace GUI
 {
@@ -19,8 +20,13 @@ namespace GUI
         public AddPhong(string id)
         {
             InitializeComponent();
-            this.ID = id; 
+            this.ID = id;
+            setCBB(); 
             GUI(id); 
+        }
+        private void setCBB()
+        {
+            cbbLoaiPhong.Items.AddRange(PhongTroBLL.Instance.GetAll_LoaiPhongTro().ToArray()); 
         }
         private void GUI (string id)
         {
@@ -28,17 +34,17 @@ namespace GUI
             {
                 txtID.Text = id;
                 txtID.Enabled = false;
-                txtTen.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).TenPhong; 
-                txtLoai.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).ID_LoaiPhong;
-                txtTT.Text = BLL.PhongTroBLL.Instance.GetPhongByID(id).TinhTrang;
+                txtTen.Text = PhongTroBLL.Instance.GetPhongByID(id).TenPhong; 
+                cbbLoaiPhong.Text = PhongTroBLL.Instance.GetLoaiPhongByID(PhongTroBLL.Instance.GetPhongByID(id).ID_LoaiPhong);
+                rbutTT.Checked = PhongTroBLL.Instance.GetPhongByID(id).TinhTrang;
             }
         }
         private void btnReset_Click(object sender, EventArgs e)
         {
             if (ID=="") txtID.Text = "";
             txtTen.Text = "";
-            txtLoai.Text = "";
-            txtTT.Text = ""; 
+            cbbLoaiPhong.Text = "";
+            rbutTTF.Checked = true; 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -51,10 +57,16 @@ namespace GUI
             DTO.PhongTro phongTro = new DTO.PhongTro();
             phongTro.ID = txtID.Text;
             phongTro.TenPhong = txtTen.Text;
-            phongTro.ID_LoaiPhong = txtLoai.Text;
-            phongTro.TinhTrang = txtTT.Text;
+            if (cbbLoaiPhong.Text == "")
+            {
+                MessageBox.Show("Loại phòng không được để trống!");
+                return;
+            } 
+            phongTro.ID_LoaiPhong = PhongTroBLL.Instance.getIDByTenLoaiPhong(cbbLoaiPhong.Text);
+            phongTro.TinhTrang = rbutTT.Checked;
+            phongTro.SoChuDien = Convert.ToInt32(txtSoChuDien.Text); 
 
-            string value = BLL.PhongTroBLL.Instance.AddPhongTro(phongTro,ID); 
+            string value = PhongTroBLL.Instance.AddPhongTro(phongTro,ID); 
             switch (value)
             {
                 case "requied_ID":

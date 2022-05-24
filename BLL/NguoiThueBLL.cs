@@ -24,7 +24,6 @@ namespace BLL
             }
             private set { }
         }
-
         public DataTable GetAllNguoiThue()
         {
             return DBHelper.Instance.GetRecords("select * from NguoiThue");
