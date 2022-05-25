@@ -104,8 +104,9 @@ namespace GUI
 
         private void lblThoat_Click(object sender, EventArgs e)
         {
-            dExit();  
+            //dExit();  
             this.Close();
+            Application.Exit();
         }
 
         private void lblLoaiPhong_Click(object sender, EventArgs e)

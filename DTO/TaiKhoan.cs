@@ -20,6 +20,8 @@ namespace DTO
         [StringLength(50)]
         public string MKhau { get; set; }
 
+        [StringLength(50)]
+        public string Email { get; set; }
         public virtual NguoiDung NguoiDung { get; set; }
     }
 }

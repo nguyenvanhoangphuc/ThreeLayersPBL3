@@ -82,6 +82,12 @@
     <Compile Include="FormLoaiPhong.Designer.cs">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMenuChuTro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,6 +144,36 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuenMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="QuenMK.Designer.cs">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SetMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="SetMK.Designer.cs">
+      <DependentUpon>SetMK.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclDangKy.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDangKy.Designer.cs">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclDangNhap.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclDangNhap.Designer.cs">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclXacNhanMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclXacNhanMK.Designer.cs">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddNhanVien.resx">
       <DependentUpon>AddNhanVien.cs</DependentUpon>
     </EmbeddedResource>
@@ -155,6 +191,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormLoaiPhong.resx">
       <DependentUpon>FormLoaiPhong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormMenuChuTro.resx">
       <DependentUpon>FormMenuChuTro.cs</DependentUpon>
@@ -190,6 +229,21 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="QuenMK.resx">
+      <DependentUpon>QuenMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SetMK.resx">
+      <DependentUpon>SetMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDangKy.resx">
+      <DependentUpon>uclDangKy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclDangNhap.resx">
+      <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclXacNhanMK.resx">
+      <DependentUpon>uclXacNhanMK.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -270,5 +324,6 @@
   <ItemGroup>
     <None Include="Resources\appliances.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

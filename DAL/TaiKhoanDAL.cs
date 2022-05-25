@@ -44,5 +44,35 @@ namespace DAL
             DataTable dt = DBHelper.Instance.GetRecords("select TuCach from Taikhoan inner join NguoiDung on TaiKhoan.ID = NguoiDung.ID where TaiKhoan.ID='" + id+"'");
             return dt.Rows[0][0].ToString(); 
         }
+        public string CheckEmail(string email)
+        {
+            DataTable dt = DBHelper.Instance.GetRecords("select * from Taikhoan where Email = '" + email + "'");
+            if (dt.Rows.Count > 0)
+            {
+                return email;  //ID
+            }
+            else
+            {
+                return "Tài khoản không tồn tại";
+            }
+        }
+        public string SetMK(string email, string MK)
+        {
+            DBHelper.Instance.ExecuteDB("UPDATE TaiKhoan set MKhau='" + MK + "' where Email ='" + email + "'");
+            return "Cập nhật mật khẩu thành công!";
+        }
+        public bool CheckTrangThai(string id)
+        {
+             return DBHelper.Instance.GetRecords("select * from Taikhoan inner join NguoiDung on TaiKhoan.ID = NguoiDung.ID where TaiKhoan.ID='" + id + "' and TrangThai = 'ChapNhan'").Rows.Count>0 ;
+        }
+        public string GetNowID()
+        {
+            return (Convert.ToInt32(DBHelper.Instance.GetRecords("select count (ID) from TaiKhoan").Rows[0][0].ToString())+1).ToString();
+        }
+        public void UpdateTaiKhoan_NguoiDung(TaiKhoan tk, NguoiDung nd)
+        {
+            DBHelper.Instance.ExecuteDB($"insert into TaiKhoan values ('{tk.ID}','{tk.TenTK}','{tk.MKhau}','{tk.Email}')");
+            DBHelper.Instance.ExecuteDB($"insert into NguoiDung values ('{nd.ID}','{nd.Ten}','{nd.QueQuan}', '{nd.SDT}','{nd.CCCD}', '{nd.TuCach}', '{nd.TrangThai}')");
+        }
     }
 }

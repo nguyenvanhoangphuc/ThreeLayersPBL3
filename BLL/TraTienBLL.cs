@@ -29,8 +29,8 @@ namespace BLL
 
         public List<TienThang> GetAllTienThangByIdPhong(string IdPhong)
         {
-            List<TienThang> data= new List<TienThang>();
-            foreach(TienThang x in GetAllTienThang())
+            List<TienThang> data = new List<TienThang>();
+            foreach (TienThang x in GetAllTienThang())
                 if (x.IdPhong == IdPhong) data.Add(x);
             return data;
         }
@@ -43,16 +43,16 @@ namespace BLL
             return data;
         }
 
-       public string GetIdPhongByIndex(int index)
-       {
+        public string GetIdPhongByIndex(int index)
+        {
             int cnt = 0;
-            foreach(TraTien tt in GetAllTraTien())
+            foreach (TraTien tt in GetAllTraTien())
             {
-                 if (cnt == index) return tt.IdPhong;
-                 ++cnt;
+                if (cnt == index) return tt.IdPhong;
+                ++cnt;
             }
             return null;
-       }
+        }
         public TienThang GetTienThangByDataRow(DataRow i)
         {
             return new TienThang
@@ -77,10 +77,10 @@ namespace BLL
                 DaNop = Convert.ToBoolean(i["DaNop"].ToString())
             };
         }
-    
+
         public string GetIDLoaiPhongByIdPhong(string IdPhong)
         {
-            DataRow r= TraTienDAL.Instance.GetIDLoaiPhongByIdPhong(IdPhong).Rows[0];
+            DataRow r = TraTienDAL.Instance.GetIDLoaiPhongByIdPhong(IdPhong).Rows[0];
             return r["ID_LoaiPhong"].ToString();
         }
         public double GetTienPhongByIDLoaiPhong(string id)
@@ -94,17 +94,17 @@ namespace BLL
         {
             DateTime dt = DateTime.Now;
             foreach (TienThang x in GetAllTienThang())
-                if (IdPhong == x.IdPhong && NgayThu > x.NgayThu) dt=x.NgayThu;
+                if (IdPhong == x.IdPhong && NgayThu > x.NgayThu) dt = x.NgayThu;
             return dt;
         }
-       
+
         public double GetTienPhongByIdPhongAndNgayThu(string IdPhong, DateTime NgayThu)
         {
-          
+
             double tien = GetTienPhongByIDLoaiPhong(GetIDLoaiPhongByIdPhong(IdPhong));
-            
+
             DateTime NgayThuTruoc = GetNgayThuTruocByIdPhongAndNgayThu(IdPhong, NgayThu);
-            var time = NgayThu-NgayThuTruoc;
+            var time = NgayThu - NgayThuTruoc;
             double cost = tien / 31;
             return cost * (time.Days);
 
@@ -120,7 +120,7 @@ namespace BLL
         }
         public double GetTienDienByChuDien(string IdPhong, int ChuDienMoi, double TMCD, DateTime NgayThu)
         {
-            int ChuDienCu = GetChuDienCu(IdPhong, NgayThu); 
+            int ChuDienCu = GetChuDienCu(IdPhong, NgayThu);
             return (ChuDienMoi - ChuDienCu) * TMCD;
 
         }
@@ -162,7 +162,7 @@ namespace BLL
                 ID_LoaiPhong = i["ID_LoaiPhong"].ToString(),
                 TinhTrang = Convert.ToBoolean(i["TinhTrang"].ToString()),
                 NgayThue = (Convert.ToBoolean(i["TinhTrang"].ToString()) == false ? DateTime.Now : Convert.ToDateTime(i["NgayThue"].ToString())),
-              
+
             };
         }
         public List<PhongTro> GetAllPhongTro()
@@ -170,14 +170,14 @@ namespace BLL
             List<PhongTro> data = new List<PhongTro>();
             foreach (DataRow i in TraTienDAL.Instance.GetAllPhongTro().Rows)
                 data.Add(GetPhongTroByDataRow(i));
-                return data;
+            return data;
         }
         public DateTime GetNgayThueById(string ID)
         {
             foreach (PhongTro i in TraTienBLL.Instance.GetAllPhongTro())
                 if (i.ID == ID)
                     return i.NgayThue.Value;
-                
+
             return DateTime.Now;
         }
         public void UpdatePhongMoi()
@@ -190,13 +190,13 @@ namespace BLL
                     if (ID == IdPhong) check = false;
                 }
 
-                if (check)      
+                if (check)
                     TraTienDAL.Instance.UpdatePhongMoi(ID, GetNgayThueById(ID));
-               
+
             }
         }
 
-     
+
         public double GetTienMotChuDien()
         {
             foreach (DataRow i in TraTienDAL.Instance.GetTienMotChuDien().Rows)
@@ -222,8 +222,8 @@ namespace BLL
         }
         public List<TraTien> GetAllTraTien()
         {
-            List<TraTien> data= new List<TraTien>();
-            
+            List<TraTien> data = new List<TraTien>();
+
             //Them doi tuong tra tien tu doi tuong phong tro
             foreach (PhongTro pt in PhongTroBLL.Instance.GetDSPhongTro())
                 if (pt.TinhTrang == true)
@@ -240,12 +240,12 @@ namespace BLL
                             i.SoThangNo++;
                             i.TongTienPhaiTra += tt.TongTien;
                         }
-                            
+
                     }
 
             return data;
-        } 
-        
+        }
+
         public ViewTraTien GetVTTByTT(TraTien x)
         {
             return new ViewTraTien
@@ -279,18 +279,18 @@ namespace BLL
             return data;
         }
 
-        
+
         public void ThemThangMoi(TienThang x)
         {
             TraTienDAL.Instance.ThemThangMoi(x);
         }
-        
+
 
         public void XoaThang(string IdPhong, DateTime NgayThu)
         {
 
             TraTienDAL.Instance.XoaThang(IdPhong, NgayThu);
         }
-     
+
     }
 }

@@ -49,3 +49,16 @@ C:\Users\HP\source\repos\ThreeLayersPBL3\main\BLL\obj\Debug\BLL.csproj.CoreCompi
 C:\Users\HP\source\repos\ThreeLayersPBL3\main\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\HP\source\repos\ThreeLayersPBL3\main\BLL\obj\Debug\BLL.dll
 C:\Users\HP\source\repos\ThreeLayersPBL3\main\BLL\obj\Debug\BLL.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\BLL.dll
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\BLL.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\DAL.dll
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\DTO.dll
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\DAL.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\DTO.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\DTO.dll.config
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\EntityFramework.xml
+C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.csproj.AssemblyReference.cache
+C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.csproj.CopyComplete
+C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.dll
+C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.pdb
