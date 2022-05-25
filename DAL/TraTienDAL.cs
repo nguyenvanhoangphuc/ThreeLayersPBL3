@@ -82,5 +82,14 @@ namespace DAL
             string query = "select * from PhongTro";
             return DBHelper.Instance.GetRecords(query);
         }
+
+        public void TinhLaiTienChoThangSau(string IdPhong, DateTime NgayThu, double TienPhong, double TienDien, double TienNuoc, double TongTien)
+        {
+            string query = $"update TienThang set TienPhong={TienPhong}, TienDien={TienDien}, TienNuoc={TienNuoc}, TongTien={TongTien} where IdPhong='{IdPhong}' and NgayThu='{NgayThu}'";
+            DBHelper.Instance.ExecuteDB(query);
+
+        }
+
+
     }
 }

@@ -15,8 +15,14 @@ namespace GUI
 {
     public partial class FormSuaThang : Form
     {
-        string IdPhong; DateTime NgayThu; double TMCD; double TMCN; int ChuNuoc; int ChuDien; bool DaNop;
-        public FormSuaThang(string IdPhong, DateTime NgayThu, double TMCD, double TMCN, int ChuNuoc, int ChuDien, bool DaNop)
+        public delegate void ChuaCongThucTrienKhai();
+        public ChuaCongThucTrienKhai TrienKhai { get; set; }
+
+        public delegate void ChuaCongThucTrienKhai2();
+        public ChuaCongThucTrienKhai2 TrienKhai2 { get; set; }
+
+        string IdPhong; DateTime NgayThu; double TMCD; double TMCN; int ChuNuoc; int ChuDien; bool DaNop; bool DayLaThangMoi;
+        public FormSuaThang(string IdPhong, DateTime NgayThu, double TMCD, double TMCN, int ChuNuoc, int ChuDien, bool DaNop, bool DayLaThangMoi)
         {
             InitializeComponent();
             this.IdPhong = IdPhong;
@@ -26,11 +32,14 @@ namespace GUI
             this.ChuNuoc = ChuNuoc;
             this.ChuDien = ChuDien;
             this.DaNop = DaNop;
+            this.DayLaThangMoi = DayLaThangMoi;
             GUI();
         }
 
         public void GUI()
         {
+
+           
             dTP_NgayTT.Value = NgayThu;
             txt_TMCD.Text = TMCD.ToString();
             txt_TMCN.Text = TMCN.ToString();
@@ -38,26 +47,18 @@ namespace GUI
             txt_ChuNuoc.Text = ChuNuoc.ToString();
             rdo_DaNop.Checked = DaNop;
             rdo_ChuaNop.Checked = !DaNop;
+          
+            if (!DayLaThangMoi)
+            {
 
+                dTP_NgayTT.Enabled = false;
+                txt_TMCD.ReadOnly = true;
+                txt_TMCN.ReadOnly = true;
+                txt_ChuDien.ReadOnly = true;
+                txt_ChuNuoc.ReadOnly = true;
+            }
         }
-   /*     public void NotOK()
-        {
-
-            TienThang x = new TienThang();
-            x.IdPhong = this.IdPhong;
-            x.NgayThu = this.NgayThu;
-            x.TienPhong = TraTienBLL.Instance.GetTienPhongByIdPhongAndNgayThu(this.IdPhong, this.NgayThu);
-            x.ChuDien = this.ChuDien;
-            x.TienMotChuDien = this.TMCD;
-            x.TienDien = TraTienBLL.Instance.GetTienDienByChuDien(this.IdPhong, this.ChuDien, this.TMCD);
-            x.ChuNuoc = this.ChuNuoc;
-            x.TienMotChuNuoc = this.TMCN;
-            x.TienNuoc = TraTienBLL.Instance.GetTienNuocByChuNuoc(this.IdPhong, this.ChuNuoc, this.TMCN);
-            x.TongTien = x.TienPhong + x.TienDien + x.TienNuoc;
-            x.DaNop = this.DaNop;
-
-            TraTienBLL.Instance.ThemThangMoi(x);
-        }*/
+  
         private void btn_Cancel_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -98,7 +99,10 @@ namespace GUI
 
                 TraTienBLL.Instance.XoaThang(this.IdPhong, this.NgayThu);
                 TraTienBLL.Instance.ThemThangMoi(x);
+                TraTienBLL.Instance.TinhLaiTienChoThangSau(this.IdPhong, x.NgayThu, x.ChuNuoc, x.ChuDien);
 
+                TrienKhai();
+                TrienKhai2();
                 this.Close();
             }
 

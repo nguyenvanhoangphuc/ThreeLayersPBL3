@@ -14,6 +14,9 @@ namespace GUI
 {
     public partial class FormDSThang : Form
     {
+        public delegate void ChuaCongThucTrienKhai();
+        public ChuaCongThucTrienKhai TrienKhai { get; set; }
+
         string IdPhong;
         string TenPhong;
 
@@ -35,22 +38,21 @@ namespace GUI
 
         private void btn_Xoa_Click(object sender, EventArgs e)
         {
-            if (dgv_DSThang.SelectedRows.Count > 0 )
-            {
-                bool check = false;
-                foreach (DataGridViewRow x in dgv_DSThang.SelectedRows)
-                    if (TraTienBLL.Instance.GetNgayThueById(x.Cells["IdPhong"].Value.ToString()) == Convert.ToDateTime(x.Cells["NgayThu"].Value))
-                        check= true;
-                if (check)
+                if (dgv_DSThang.Rows.Count == 1)
                         {
                             MessageBox.Show("Vui lòng không xóa tháng bắt đầu thuê trọ vì đây là tháng mặc định dùng để tính tiền các tháng sau", "Thông báo");
                             return;
                         }
-                foreach (DataGridViewRow x in dgv_DSThang.SelectedRows)
-                    TraTienBLL.Instance.XoaThang(x.Cells["IdPhong"].Value.ToString(), Convert.ToDateTime(x.Cells["NgayThu"].Value));
-                GUI();
+                else { 
+                    DialogResult dr= MessageBox.Show("Bạn có chắc muốn xóa tháng mới nhất ?", "Thông báo", MessageBoxButtons.YesNo);
+                    
+                    DataGridViewRow x= dgv_DSThang.Rows[dgv_DSThang.Rows.Count-1];
+                    if (dr == DialogResult.Yes)
+                        TraTienBLL.Instance.XoaThang(x.Cells["IdPhong"].Value.ToString(), Convert.ToDateTime(x.Cells["NgayThu"].Value));
+
+                    GUI();
+                    TrienKhai();
             }
-            else MessageBox.Show("Vui long click mot hoac nhieu thang de xoa","Thong bao");
         }
 
         private void btn_Sua_Click(object sender, EventArgs e)
@@ -73,10 +75,18 @@ namespace GUI
                 int ChuNuoc = Convert.ToInt32(x.Cells["ChuNuoc"].Value);
                 bool DaNop = Convert.ToBoolean(x.Cells["DaNop"].Value);
 
-           
-                FormSuaThang f = new FormSuaThang(IdPhong, NgayThu, TMCD, TMCN, ChuDien, ChuNuoc, DaNop);
-                f.Show();
+                bool DayLaThangMoi = false;
+                x = dgv_DSThang.Rows[dgv_DSThang.Rows.Count - 1];
+                DateTime NgayThuCuoi = Convert.ToDateTime(x.Cells["NgayThu"].Value);
+
+                if (NgayThu == NgayThuCuoi) DayLaThangMoi = true;
+                FormSuaThang f = new FormSuaThang(IdPhong, NgayThu, TMCD, TMCN, ChuDien, ChuNuoc, DaNop, DayLaThangMoi);
                 
+                f.Show();
+                f.TrienKhai = new FormSuaThang.ChuaCongThucTrienKhai(GUI);
+                f.TrienKhai2 = new FormSuaThang.ChuaCongThucTrienKhai2(TrienKhai);
+
+
             }
             else MessageBox.Show("Vui long click vao mot thang de sua", "Thong bao");
         }

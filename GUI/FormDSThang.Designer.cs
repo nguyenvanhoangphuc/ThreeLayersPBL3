@@ -70,7 +70,7 @@
             this.btn_Xoa.Name = "btn_Xoa";
             this.btn_Xoa.Size = new System.Drawing.Size(190, 52);
             this.btn_Xoa.TabIndex = 2;
-            this.btn_Xoa.Text = "Xóa một hoặc nhiều tháng";
+            this.btn_Xoa.Text = "Xóa tháng mới nhất";
             this.btn_Xoa.UseVisualStyleBackColor = true;
             this.btn_Xoa.Click += new System.EventHandler(this.btn_Xoa_Click);
             // 

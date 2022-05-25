@@ -75,8 +75,9 @@ namespace GUI
                 string IdPhong = TraTienBLL.Instance.GetIdPhongByIndex(index);
                
                 FormThemThang f = new FormThemThang(IdPhong, TenPhong, NgayThu, TMCD, TMCN);
-                f.TrienKhai = new FormThemThang.ChuaCongThucTrienKhai(GUI);
+               
                 f.Show();
+                f.TrienKhai = new FormThemThang.ChuaCongThucTrienKhai(GUI);
             }
             else
                 MessageBox.Show("Vui long click chon 1 phong truoc khi them thang moi", "Thong bao");
@@ -93,8 +94,12 @@ namespace GUI
 
                 FormDSThang f = new FormDSThang(IdPhong, TenPhong);
                 f.Show();
+                f.TrienKhai = new FormDSThang.ChuaCongThucTrienKhai(GUI);
+               
             }
             else MessageBox.Show("Vui long click vao 1 phong de xem chi tiet danh sach thang","Thong bao");
         }
+
+       
     }
 }
