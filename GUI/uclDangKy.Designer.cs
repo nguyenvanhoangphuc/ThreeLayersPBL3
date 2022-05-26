@@ -338,7 +338,6 @@
             this.rdoDongY.TabStop = true;
             this.rdoDongY.Text = "Tôi đồng ý với chính sách và điều khoản của";
             this.rdoDongY.UseVisualStyleBackColor = true;
-            this.rdoDongY.CheckedChanged += new System.EventHandler(this.rdoDongY_CheckedChanged);
             // 
             // btnDangky
             // 

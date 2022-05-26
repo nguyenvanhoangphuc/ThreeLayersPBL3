@@ -14,8 +14,10 @@ namespace GUI
     {
         public delegate void myDel();
         public myDel dExit;
-        public FormMenuNhanVien()
+        string IDNhanVien;
+        public FormMenuNhanVien(string ID)//thêm id để sửa tài khoản
         {
+            IDNhanVien = ID;
             InitializeComponent();
         }
 
@@ -90,6 +92,12 @@ namespace GUI
         private void lblLoaiPhong_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblTaiKhoan_Click(object sender, EventArgs e)
+        {
+            panel4.Controls.Clear();
+            panel4.Controls.Add(new uclSuaTKNhanVien(IDNhanVien));
         }
     }
 }

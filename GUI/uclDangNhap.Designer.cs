@@ -39,14 +39,14 @@
             this.txtTenDangNhap = new System.Windows.Forms.TextBox();
             this.lblDangNhap = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnHienMatKhau = new System.Windows.Forms.Button();
             this.picMatKhau = new System.Windows.Forms.PictureBox();
             this.picTenDangNhap = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMatKhau)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTenDangNhap)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMatKhau
@@ -159,6 +159,7 @@
             this.txtTenDangNhap.Size = new System.Drawing.Size(375, 30);
             this.txtTenDangNhap.TabIndex = 133;
             this.txtTenDangNhap.Text = "Tên đăng nhập";
+            this.txtTenDangNhap.TextChanged += new System.EventHandler(this.txtTenDangNhap_TextChanged);
             this.txtTenDangNhap.Enter += new System.EventHandler(this.txtTenDangNhap_Enter);
             this.txtTenDangNhap.Leave += new System.EventHandler(this.txtTenDangNhap_Leave);
             // 
@@ -182,6 +183,17 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(80, 62);
             this.panel1.TabIndex = 144;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(75, 54);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 130;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHienMatKhau
             // 
@@ -220,17 +232,6 @@
             this.picTenDangNhap.TabIndex = 135;
             this.picTenDangNhap.TabStop = false;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(75, 54);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 130;
-            this.pictureBox1.TabStop = false;
-            // 
             // uclDangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -252,9 +253,9 @@
             this.Name = "uclDangNhap";
             this.Size = new System.Drawing.Size(530, 702);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picMatKhau)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picTenDangNhap)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -62,3 +62,6 @@ C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.csproj.CoreCompileInputs.ca
 C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.csproj.CopyComplete
 C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.dll
 C:\Users\HP\source\repos\pbl3\main\BLL\obj\Debug\BLL.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\HtmlAgilityPack.dll
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\HtmlAgilityPack.pdb
+C:\Users\HP\source\repos\pbl3\main\BLL\bin\Debug\HtmlAgilityPack.xml

@@ -4,7 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DTO;
-using DAL; 
+using DAL;
+using System.Net.Sockets;
+using System.IO;
 
 namespace BLL
 {
@@ -68,7 +70,7 @@ namespace BLL
         }
         public void UpdateTaiKhoan_NguoiDung(TaiKhoan tk, NguoiDung nd)
         {
-            TaiKhoanDAL.Instance.UpdateTaiKhoan_NguoiDung(tk, nd);
+            TaiKhoanDAL.Instance.InsertTaiKhoan_NguoiDung(tk, nd);
         }
         public string CheckThongTin(TaiKhoan tk, NguoiDung nd)
         {
@@ -76,9 +78,26 @@ namespace BLL
             {
                 return "Tên người dùng không được để trống";
             }
-            else if (tk.Email == null)
+            if (tk.Email == null)
             {
                 return "Email không được để trống";
+            }
+            else//kiểm tra email hợp lệ     => đoạn ni có sửa
+            {
+                string KQCheckEmail = CheckEmail(tk.Email);
+
+                if (KQCheckEmail == "Email không hợp lệ")
+                {
+                    return "Email không hợp lệ";
+                }
+                else if (KQCheckEmail == tk.Email)
+                {
+                    return "Email đã tồn tại";
+                }
+                else if (!CheckEmailExxist(tk.Email))
+                {
+                    return "Email không tồn tại";
+                }
             }
             if (nd.SDT == null)
             {
@@ -106,5 +125,76 @@ namespace BLL
             }
             return "Tài khoản hợp lệ";
         }
+        private bool CheckEmailExxist(string gmail)
+        //Trả về True là gmail tồn tại
+        {
+            bool ketqua = false;
+            TcpClient tClient = new TcpClient("gmail-smtp-in.l.google.com", 25);
+            string CRLF = "\r\n";
+            byte[] dataBuffer;
+            string ResponseString;
+            NetworkStream netStream = tClient.GetStream();
+            StreamReader reader = new StreamReader(netStream);
+            ResponseString = reader.ReadLine();
+            dataBuffer = BytesFromString("HELO VietQuan" + CRLF);
+            netStream.Write(dataBuffer, 0, dataBuffer.Length);
+            ResponseString = reader.ReadLine();
+            dataBuffer = BytesFromString("MAIL FROM:<tracdiaviet.com.vn@gmail.com>" + CRLF);
+            netStream.Write(dataBuffer, 0, dataBuffer.Length);
+            ResponseString = reader.ReadLine();
+            dataBuffer = BytesFromString("RCPT TO:<" + gmail.Trim() + ">" + CRLF);
+            netStream.Write(dataBuffer, 0, dataBuffer.Length);
+            ResponseString = reader.ReadLine();
+            if (GetResponseCode(ResponseString) == 550)
+            {
+                ketqua = false;
+            }
+            else
+            {
+                ketqua = true;
+            }
+            dataBuffer = BytesFromString("QUITE" + CRLF);
+            netStream.Write(dataBuffer, 0, dataBuffer.Length);
+            tClient.Close();
+
+            return ketqua;
+        }
+        private byte[] BytesFromString(string str)
+        {
+            return Encoding.ASCII.GetBytes(str);
+        }
+        private int GetResponseCode(string ResponseString)
+        {
+            return int.Parse(ResponseString.Substring(0, 3));
+        }
+
+        public TaiKhoan GetTKByID(string IDNhanVien)
+        {
+            return TaiKhoanDAL.Instance.GetTKByID(IDNhanVien);
+        }
+        public NguoiDung GetNDByID(string IDNhanVien)
+        {
+            return TaiKhoanDAL.Instance.GetNDByID(IDNhanVien);
+        }
+
+        public string DoiMatKhau(string ID, string nowMK, string newMK, string retypeMK)
+        {
+            if (TaiKhoanDAL.Instance.CheckTKByID_MK(ID, nowMK))
+            {
+                if(newMK == retypeMK)
+                {
+                    return TaiKhoanDAL.Instance.UpDateMK(ID, newMK);
+                }
+                else
+                {
+                    return "Mật khẩu không khớp";
+                }
+            }
+            else
+            {
+                return "Mật khẩu không chính xác";
+            }
+        }
+
     }
 }

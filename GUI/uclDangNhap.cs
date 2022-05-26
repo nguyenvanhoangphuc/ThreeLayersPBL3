@@ -37,14 +37,14 @@ namespace GUI
                 if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "ChuTro")
                 {
 
-                    FormMenuChuTro fCT = new FormMenuChuTro();
+                    FormMenuChuTro fCT = new FormMenuChuTro(getuser); //thêm id để sửa tài khoản
                     fCT.dExit = new FormMenuChuTro.myDel(xuathien);
                     fCT.Show();
                     this.Hide();
                 }
                 else if (TaiKhoanBLL.Instance.CheckTuCach(getuser) == "NhanVien")
                 {
-                    FormMenuNhanVien fNV = new FormMenuNhanVien();
+                    FormMenuNhanVien fNV = new FormMenuNhanVien(getuser); //thêm id để sửa tài khoản
                     fNV.dExit = new FormMenuNhanVien.myDel(xuathien);
                     fNV.Show();
                     this.Hide();
@@ -126,6 +126,11 @@ namespace GUI
             QuenMK quenMK = new QuenMK();
             this.Hide();
             this.Parent.Controls.Add(quenMK);
+        }
+
+        private void txtTenDangNhap_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

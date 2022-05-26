@@ -14,8 +14,10 @@ namespace GUI
     {
         public delegate void myDel();
         public myDel dExit;
-        public FormMenuChuTro()
+        string IDChuTro;
+        public FormMenuChuTro(string ID)//thêm id để sửa Tài khoản
         {
+            IDChuTro = ID;
             InitializeComponent();
         }
         public void Default()

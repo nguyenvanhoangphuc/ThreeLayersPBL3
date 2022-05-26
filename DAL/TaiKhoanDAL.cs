@@ -69,10 +69,48 @@ namespace DAL
         {
             return (Convert.ToInt32(DBHelper.Instance.GetRecords("select count (ID) from TaiKhoan").Rows[0][0].ToString())+1).ToString();
         }
-        public void UpdateTaiKhoan_NguoiDung(TaiKhoan tk, NguoiDung nd)
+        public void InsertTaiKhoan_NguoiDung(TaiKhoan tk, NguoiDung nd)
         {
             DBHelper.Instance.ExecuteDB($"insert into TaiKhoan values ('{tk.ID}','{tk.TenTK}','{tk.MKhau}','{tk.Email}')");
-            DBHelper.Instance.ExecuteDB($"insert into NguoiDung values ('{nd.ID}','{nd.Ten}','{nd.QueQuan}', '{nd.SDT}','{nd.CCCD}', '{nd.TuCach}', '{nd.TrangThai}')");
+            DBHelper.Instance.ExecuteDB($"insert into NguoiDung values ('{nd.ID}','{nd.Ten}','{nd.QueQuan}', '{nd.SDT}','{nd.CCCD}', '{nd.TuCach}', 'Cho')");
+        }
+        public TaiKhoan GetTKByID(string IDNhanVien)
+        {
+            DataRow tk = DBHelper.Instance.GetRecords("select * from Taikhoan where ID = '" + IDNhanVien + "'").Rows[0];
+            if (tk == null) return null;
+            return new TaiKhoan{
+                ID = tk[0].ToString(),
+                TenTK = tk[1].ToString(),
+                MKhau = tk[2].ToString(),
+                Email = tk[3].ToString()
+            };
+        }
+        public NguoiDung GetNDByID(string IDNhanVien)
+        {
+            DataRow tk = DBHelper.Instance.GetRecords($"select * from NguoiDung where ID = '{IDNhanVien}'").Rows[0];
+            return new NguoiDung
+            {
+                ID = tk[0].ToString(),
+                Ten = tk[1].ToString(),
+                QueQuan = tk[2].ToString(),
+                SDT = tk[3].ToString(),
+                CCCD = tk[4].ToString(),
+                TuCach = tk[5].ToString(),
+                TrangThai = tk[6].ToString()
+            };
+        }
+        public bool CheckTKByID_MK(string ID,string nowMK)
+        {
+            if(DBHelper.Instance.GetRecords($"select * from TaiKhoan where ID = '{ID}' and MKhau ='{nowMK}' ").Rows.Count > 0)
+            {
+                return true;
+            }
+            return false;
+        }
+        public string UpDateMK(string ID,string newMK)
+        {
+            DBHelper.Instance.ExecuteDB($"update TaiKhoan set MKhau = '{newMK}' where ID='{ID}'");
+            return "Cập nhật mật khẩu thành công";
         }
     }
 }

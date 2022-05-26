@@ -379,6 +379,7 @@ namespace GUI
             this.lblTaiKhoan.Size = new System.Drawing.Size(104, 27);
             this.lblTaiKhoan.TabIndex = 7;
             this.lblTaiKhoan.Text = "Tài khoản";
+            this.lblTaiKhoan.Click += new System.EventHandler(this.lblTaiKhoan_Click);
             this.lblTaiKhoan.MouseEnter += new System.EventHandler(this.lbl_MouseEnter);
             this.lblTaiKhoan.MouseLeave += new System.EventHandler(this.lbl_MouseLeave);
             // 

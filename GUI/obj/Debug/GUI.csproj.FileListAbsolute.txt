@@ -164,3 +164,5 @@ C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.QuenMK.resources
 C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.uclDangKy.resources
 C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.uclXacNhanMK.resources
 C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.uclSetMK.resources
+C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.uclSuaTKNhanVien.resources
+C:\Users\HP\source\repos\pbl3\main\GUI\obj\Debug\GUI.uclThayDoiMK.resources

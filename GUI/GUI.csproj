@@ -168,6 +168,18 @@
     <Compile Include="uclDangNhap.Designer.cs">
       <DependentUpon>uclDangNhap.cs</DependentUpon>
     </Compile>
+    <Compile Include="uclSuaTKNhanVien.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclSuaTKNhanVien.Designer.cs">
+      <DependentUpon>uclSuaTKNhanVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="uclThayDoiMK.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="uclThayDoiMK.Designer.cs">
+      <DependentUpon>uclThayDoiMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="uclXacNhanMK.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -240,6 +252,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="uclDangNhap.resx">
       <DependentUpon>uclDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclSuaTKNhanVien.resx">
+      <DependentUpon>uclSuaTKNhanVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="uclThayDoiMK.resx">
+      <DependentUpon>uclThayDoiMK.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="uclXacNhanMK.resx">
       <DependentUpon>uclXacNhanMK.cs</DependentUpon>

@@ -42,7 +42,7 @@ namespace GUI
 
         private void txtMaXN_Enter(object sender, EventArgs e)
         {
-            if (txtMaXN.Text == "Mã xác nhận") ;
+            if (txtMaXN.Text == "Mã xác nhận") 
             {
                 txtMaXN.UseSystemPasswordChar = true;
                 txtMaXN.Text = "";

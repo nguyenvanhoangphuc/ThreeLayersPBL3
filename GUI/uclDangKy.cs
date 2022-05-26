@@ -16,7 +16,6 @@ namespace GUI
     {
         TaiKhoan tk = new TaiKhoan();
         NguoiDung nd = new NguoiDung();
-        static bool DongY=false;
         public uclDangKy()
         {
             InitializeComponent();
@@ -189,12 +188,11 @@ namespace GUI
                 string ThongBao = TaiKhoanBLL.Instance.CheckThongTin(tk, nd);
                 if ( ThongBao == "Tài khoản hợp lệ")
                 {
-                    //update
+                    //insert
                     tk.ID = TaiKhoanBLL.Instance.GetNowID();
                     nd.ID = tk.ID;
-                    TaiKhoanBLL.Instance.UpdateTaiKhoan_NguoiDung(tk, nd);
-                    MessageBox.Show("Tài khoản của bạn đang chờ được xét duyệt");
-                    DongY=false;
+                    TaiKhoanBLL.Instance.UpdateTaiKhoan_NguoiDung(tk, nd);//lộn update rồi
+                    MessageBox.Show("Đăng kí thành công. Tài khoản của bạn đang chờ được xét duyệt");
                     uclDangNhap ucl = new uclDangNhap();
                     this.Hide();
                     Parent.Controls.Add(ucl);
@@ -251,10 +249,6 @@ namespace GUI
             {
                 nd.TuCach = "ChuTro";
             }
-            else
-            {
-                nd.TuCach = null;
-            }
         }
 
         private void rdoNhanVien_CheckedChanged(object sender, EventArgs e)
@@ -263,15 +257,7 @@ namespace GUI
             {
                 nd.TuCach = "NhanVien";
             }
-            else
-            {
-                nd.TuCach = null;
-            }
         }
 
-        private void rdoDongY_CheckedChanged(object sender, EventArgs e)
-        {
-            if (rdoDongY.Checked) DongY = true;
-        }
     }
 }
