@@ -88,10 +88,10 @@ namespace DTO
                 .HasForeignKey(e => e.IDNhanVien)
                 .WillCascadeOnDelete(false);
 
-            modelBuilder.Entity<NguoiThue>()
+            /*modelBuilder.Entity<NguoiThue>()
                 .HasMany(e => e.PhongTroes)
                 .WithMany(e => e.NguoiThues)
-                .Map(m => m.ToTable("QLDatPhong").MapLeftKey("SDT").MapRightKey("ID_Phong"));
+                .Map(m => m.ToTable("QLDatPhong").MapLeftKey("SDT").MapRightKey("ID_Phong"));*/
 
             modelBuilder.Entity<PhongTro>()
                 .Property(e => e.ID)

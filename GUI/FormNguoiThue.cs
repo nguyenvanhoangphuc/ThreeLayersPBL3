@@ -13,6 +13,8 @@ namespace GUI
 {
     public partial class FormNguoiThue : Form
     {
+        public bool sua = false;
+        public DataGridViewSelectedRowCollection SelectedRowCollection;
         public FormNguoiThue()
         {
             InitializeComponent();
@@ -35,23 +37,24 @@ namespace GUI
                 txt_QueQuan.Text = r.Cells["QueQuan"].Value.ToString();
                 txt_CCCD.Text = r.Cells["CCCD"].Value.ToString();
 
-
-                string sdt = r.Cells["SDT"].Value.ToString();
-                string sql = "DELETE FROM NguoiThue"
-                           + $" WHERE SDT = '{sdt}'";
-
-                NguoiThueBLL.Instance.ThucThiBLL(sql);
-
+                SelectedRowCollection = dgv_NguoiThue.SelectedRows;
+                sua = true;
+                
             }
+            else MessageBox.Show("Vui lòng chọn một hàng để sửa", "Thông báo");
         }
 
         private void but_luu_Click(object sender, EventArgs e)
         {
 
-            string sql = "Insert into NguoiThue (HoTen, SDT, QueQuan, CCCD) "
-                       + $" values (N'{txt_HoTen.Text}', '{txt_SDT.Text}', N'{txt_QueQuan.Text}', '{txt_CCCD.Text}') ";
-
-            NguoiThueBLL.Instance.ThucThiBLL(sql); 
+            if (sua)
+            {
+                NguoiThueBLL.Instance.Xoa(SelectedRowCollection);
+                NguoiThueBLL.Instance.Luu(NguoiThueBLL.Instance.NewNguoiThue(Convert.ToInt32(SelectedRowCollection[0].Cells["Id"].Value.ToString()), txt_HoTen.Text, txt_SDT.Text, txt_QueQuan.Text, txt_CCCD.Text, false));
+                sua=false;
+            }
+            else
+            NguoiThueBLL.Instance.Luu(NguoiThueBLL.Instance.NewNguoiThue(dgv_NguoiThue.Rows.Count + 1,txt_HoTen.Text, txt_SDT.Text, txt_QueQuan.Text, txt_CCCD.Text, false)); 
 
             GUI();
         }
@@ -60,21 +63,10 @@ namespace GUI
         {
             if (dgv_NguoiThue.SelectedRows.Count > 0)
             {
-                List<string> list = new List<string>();
-                foreach (DataGridViewRow r in dgv_NguoiThue.SelectedRows)
-                {
-                    list.Add(r.Cells["SDT"].Value.ToString());
-                }
-
-                foreach (string sdt in list)
-                {
-                    string sql = "DELETE FROM NguoiThue"
-                               + $" WHERE SDT = '{sdt}'";
-
-                    NguoiThueBLL.Instance.ThucThiBLL(sql);
-                }
+                NguoiThueBLL.Instance.Xoa(dgv_NguoiThue.SelectedRows);
                 GUI();
             }
+            else MessageBox.Show("Vui lòng chọn một hoặc nhiều hàng để xóa","Thông báo");
         }
 
         private void label1_Click(object sender, EventArgs e)

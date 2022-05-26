@@ -292,26 +292,7 @@ namespace BLL
             TraTienDAL.Instance.XoaThang(IdPhong, NgayThu);
         }
 
-        public void TinhLaiTienChoThangSau(string IdPhong, DateTime NgayTruoc, int ChuNuoc, int ChuDien)
-        {
-            bool DayLaThangMoi = true;
-            TienThang y= new TienThang();
-            foreach (TienThang x in GetAllTienThangByIdPhong(IdPhong))
-                if (x.NgayThu > NgayTruoc)
-                {
-                    y = x;
-                    DayLaThangMoi = false;
-                    break;
-                }
-            if (!DayLaThangMoi)
-            {
-                y.TienPhong = GetTienPhongByIdPhongAndNgayThu(IdPhong, y.NgayThu);
-                y.TienDien = GetTienDienByChuDien(IdPhong, y.ChuDien, y.TienMotChuDien, y.NgayThu);
-                y.TienNuoc= GetTienDienByChuDien(IdPhong, y.ChuNuoc, y.TienMotChuNuoc, y.NgayThu);
-                y.TongTien = y.TienPhong + y.TienDien + y.TienNuoc;
-                TraTienDAL.Instance.TinhLaiTienChoThangSau(IdPhong, y.NgayThu, y.TienPhong, y.TienDien, y.TienNuoc, y.TongTien);
-            }
-        }
+       
 
     }
 }

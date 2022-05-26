@@ -99,7 +99,7 @@ namespace GUI
 
                 TraTienBLL.Instance.XoaThang(this.IdPhong, this.NgayThu);
                 TraTienBLL.Instance.ThemThangMoi(x);
-                TraTienBLL.Instance.TinhLaiTienChoThangSau(this.IdPhong, x.NgayThu, x.ChuNuoc, x.ChuDien);
+                
 
                 TrienKhai();
                 TrienKhai2();

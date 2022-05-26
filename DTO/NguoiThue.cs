@@ -10,16 +10,21 @@ namespace DTO
     public partial class NguoiThue
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public NguoiThue()
+        /*public NguoiThue()  
         {
             PhongTroes = new HashSet<PhongTro>();
-        }
+        }*/
+
+        [Key]
+        [StringLength(15)]
+
+        public int Id { get; set; } 
 
         [Required]
         [StringLength(50)]
         public string HoTen { get; set; }
 
-        [Key]
+        [Required]
         [StringLength(15)]
         public string SDT { get; set; }
 
@@ -31,7 +36,9 @@ namespace DTO
         [StringLength(50)]
         public string CCCD { get; set; }
 
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<PhongTro> PhongTroes { get; set; }
+        public bool DaThue { get; set; }
+
+        /*[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PhongTro> PhongTroes { get; set; }*/
     }
 }
